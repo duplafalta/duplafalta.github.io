@@ -1,0 +1,90 @@
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "header"
+  "relacao"
+  "titulo-masculino"
+  "masculino"
+  "titulo-feminino"
+  "feminino"
+  "historico"
+  "resumo"
+  "footer";
+  grid-template-rows: 120px 60px 30px 40px 30px 40px 40px 560px 60px;
+}
+
+.container > div {
+  font-family:Roboto, Helvetica, sans-serif;
+}
+
+.header {
+  grid-area: header;
+}
+
+.relacao {
+  grid-area: relacao;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-masculino {
+  grid-area: titulo-masculino;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.masculino {
+  grid-area: masculino;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:4px solid #FFFFFF;
+}
+
+.titulo-feminino {
+  grid-area: titulo-feminino;
+  background-color: #1F2223;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+
+}
+
+.feminino {
+  grid-area: feminino;
+  background-color: #1F2223;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:4px solid #FFFFFF;
+}
+
+.historico {
+  grid-area: historico;
+  background-color: #149dcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumo {
+  grid-area: resumo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

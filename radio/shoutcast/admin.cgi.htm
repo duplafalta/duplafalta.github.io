@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale=1"><title>SHOUTcast Administrator</title><link href="index.css" rel="stylesheet" type="text/css"><link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"></head><body style="margin:0;"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><div class="logo">SHOUTcast Stream Status &amp; Listeners</div></td><td style="text-align:right;vertical-align:bottom;padding-right:0.1em;"><div id="up"></div><a target="_blank" title="Built: Jan 27 2017" href="http://www.shoutcast.com">SHOUTcast Server v2.5.1.724/<wbr>win32</a></td></tr><tr><td class="thr" align="center" colspan="3"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td class="thr" align="center"><div id="hdrbox" class="tnl" style="justify-content:space-around;display:flex;flex-flow:row wrap;"><div class="thr"><a href="admin.cgi?sid=1">Status &amp; Listeners</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=history">History&nbsp;<img border="0" title="History" alt="History" style="vertical-align:middle" src="images/history.png"></a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=viewlog">Log</a> (<a href="admin.cgi?sid=1&amp;mode=viewlog&amp;viewlog=tail">Tailing</a> | <a href="admin.cgi?sid=1&amp;mode=viewlog&amp;viewlog=save">Save</a>)</div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=register">Authhash</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=viewban">Ban List</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=viewrip">Reserved List</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi?sid=1&amp;mode=viewagent">User Agent List</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="index.html?sid=1">Stream Logout</a></div><div class="thr">&nbsp;|&nbsp;</div><div class="thr"><a href="admin.cgi">Server Login&nbsp;<img border="0" title="Server Login
+Password Required" alt="Server Login
+Password Required" style="vertical-align:middle" src="images/lock.png"></a></div></div></td></tr></table></td></tr></table><div id="listeners"><div style="padding:1em;text-align:center;"><b>Loading current listener list...</b></div></div><table cellpadding="5" cellspacing="0" border="0" width="100%"><tr><td class="tsp" align="center">Current Stream Information</td></tr></table><div style="padding:0 1em;"><br></div><table width="100%" align="center"><tr valign="top"><td><table class="en" cellpadding="15px" style="border:0;margin-left:1em;"><tr><td valign="top"><div align="center" class="infh"><b>Stream Details</b></div>Log file: <b title="C:\Program Files\Shoutcast\sc_serv.log">sc_serv.log</b><br>Configuration file: <b title="C:\Program Files\SHOUTcast\sc_serv.ini">sc_serv.ini</b><br><br><hr><br>Intro file is <b title="">empty</b><br>Backup file is <b title="">empty</b><br><br><hr><br>Idle timeouts are <b>30s</b><br><br><hr><br>Source connection type: <b>v1</b><br><div style="max-width:15em;">Source user agent: <b>Mozilla/<wbr>3.0 (<wbr>compatible)</b></div><br><hr><br>Stream artwork <b>not available</b><br>Playing artwork <b>not available</b><br><br><hr><br>Song url from source [&nbsp;<a href="&artist=&title=CAGE%20THE%20ELEPHANT%20%2D%20TROUBLE&album=&duration=10000&songtype=S&overlay=&buycd=&website=&picture=">view</a>&nbsp;]<br><div style="max-width:15em;"><b>Note:</b> This may not be a valid url and is intended for internal use.</div></td></tr></table></td><td><table cellspacing="0" cellpadding="2" border="0" style="padding-left:1em;"><tr valign="top"><td colspan="2"><td></tr><tr valign="top"><td>Listing Status: </td><td><b>Stream is currently up but requires <a href="admin.cgi?sid=1&amp;mode=register">registration</a> in the SHOUTcast Directory.<br>Listeners are allowed and the stream will act like it is private until resolved.<br><br>To create an authhash you will need to <a href="admin.cgi?sid=1&amp;mode=register">register</a> the stream with us.<br>If you already have an existing authhash then you can enter it <a href="admin.cgi?sid=1&amp;mode=register">here</a>.<br><br></b></td></tr><tr valign="top"><td>Stream Status: </td><td><b>Stream is up (MP3 @ 64 kbps, 24 kHz) with 2 of 30 listeners</b></td></tr><tr valign="top"><td>Listener Peak: </td><td><b>5</b></td></tr><tr valign="top"><td>Avg. Play Time: </td><td><b>8 minutes 42 seconds</b></td></tr><tr valign="top"><td>Stream Name: </td><td><b>Dupla Falta</b></td></tr><tr valign="top"><td>Stream Genre(s): </td><td><b>world</b></td></tr><tr valign="top"><td>Stream Website: </td><td><b><a target="_blank" href="http://duplafalta.com.br">duplafalta.<wbr>com.<wbr>br</a></b></td></tr><tr valign="top"><td>Playing Now: </td><td><b><a href="currentsong?sid=1">CAGE THE ELEPHANT - TROUBLE</a></b></td></tr><tr valign="top"><td>Stream Source: </td><td><b>127.0.0.1 </b>[&nbsp;<a href="admin.cgi?sid=1&amp;mode=kicksrc">kick</a>&nbsp;]</td></tr><tr valign="top"><td>Stream Uptime: </td><td id="up2"><b>1 minute 33 seconds</b></td></tr><tr><td colspan="2" align="center"><audio id="audio_1" controls preload="none" style="width:16em;padding:0;"><source src="/;?type=http&amp;nocache=562" type='audio/mpeg'></audio></td></tr></table></td></tr></table><script type="text/javascript">function $(id){return document.getElementById(id);}
+function pad(num){return(num<10?'0':'')+num;}
+var i=20157;
+function time(t,slim){
+var min=parseInt(t/60);
+var sec=t-parseInt(min*60);
+var hours=parseInt(min/60);
+min-=parseInt(hours*60);
+var r="";
+var days=parseInt(hours/24);
+hours-=parseInt(days*24);
+var weeks=parseInt(days/7);
+days-=parseInt(weeks*7);
+var years=parseInt(weeks/52);
+weeks-=parseInt(years*52);
+if(years)r+=years+" year"+(years!=1?"s":"")+" ";
+if(weeks)r+=weeks+" week"+(weeks!=1?"s":"")+" ";
+if(days)r+=days+" day"+(days!=1?"s":"")+" ";
+if(slim){
+r+=pad(hours)+":"+pad(min)+":"+pad(sec);
+}else{
+if(hours)r+=hours+" hour"+(hours!=1?"s":"")+" ";
+if(min)r+=min+" minute"+(min!=1?"s":"")+" ";
+if(sec)r+=sec+" second"+(sec!=1?"s":"");
+}
+return r;
+}
+function count(){i++;$('up').innerHTML=" Uptime: "+(!i?"Starting&hellip;":time(i,1));}
+count();setInterval(count,1000);
+var is=93;
+function counts(){is++;$('up2').innerHTML="<b>"+(!is?"Starting&hellip;":time(is,0))+"<\/b>";}
+counts();setInterval(counts,1000);
+</script><script type="text/javascript">
+function $(id){return document.getElementById(id);}
+var registerOnWindowLoad=function(callback){
+if(window.addEventListener){
+window.addEventListener('load',callback,false);
+}else{
+window.attachEvent('onload',callback);
+}
+};
+registerOnWindowLoad(function(){
+if(navigator.userAgent.match(/msie|trident/i)){
+$('hdrbox').style.display = 'block';
+}
+});
+</script><script type="text/javascript">
+var registerOnWindowLoad=function(callback){
+if(window.addEventListener){
+window.addEventListener('load',callback,false);
+}else{
+window.attachEvent('onload',callback);
+}
+};
+registerOnWindowLoad(function(){
+var audio=document.getElementsByTagName("audio");
+if(audio.length){
+var canPlay = !!audio[0].canPlayType && audio[0].canPlayType('audio/mpeg; codecs="mp3"') != "";
+if(!canPlay){
+for(var i=audio.length-1;i>=0;i--){
+var parent = audio[i].parentNode;
+parent.removeChild(audio[i]);
+var parent2 = parent.parentNode;
+parent2.removeChild(parent);
+}
+}
+}
+});
+</script><script type="text/javascript">
+function $(id){return document.getElementById(id);}
+var registerOnWindowLoad=function(callback){
+if(window.addEventListener){
+window.addEventListener('load',callback,false);
+}else{
+window.attachEvent('onload',callback);
+}
+};
+function getHTTP(){
+if(window.XDomainRequest){
+return new XDomainRequest();
+}else if(window.XMLHttpRequest){
+return new XMLHttpRequest();
+}else{
+return new ActiveXObject("Microsoft.XMLHTTP");
+}
+}
+function getListeners(){
+var xmlhttp = getHTTP();
+try{
+xmlhttp.open("GET","admin.cgi?sid=1&mode=listeners&server=22168576&nw=0&fh=0",true);
+if(window.XDomainRequest){
+xmlhttp.onload=function(){$('listeners').innerHTML=xmlhttp.responseText;};
+xmlhttp.onerror=function(){$('listeners').innerHTML=xmlhttp.responseText;};
+}else{
+xmlhttp.onreadystatechange=function(){$('listeners').innerHTML=xmlhttp.responseText;};
+}
+xmlhttp.send(null);
+}
+catch(e){
+$('listeners').innerHTML=e;
+}
+}
+registerOnWindowLoad(getListeners());
+</script></body></html>
