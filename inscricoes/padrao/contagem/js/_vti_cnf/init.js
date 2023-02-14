@@ -1,0 +1,10 @@
+vti_encoding:SR|utf8-nl
+vti_author:SR|JUNIOR\\junior
+vti_modifiedby:SR|JUNIOR\\junior
+vti_timelastmodified:TR|17 Mar 2016 13:02:46 -0000
+vti_timecreated:TR|28 Jul 2015 14:03:00 -0000
+vti_extenderversion:SR|6.0.2.8161
+vti_backlinkinfo:VX|dupla-falta-2015/inscricoes/padrao/contagem/index.html
+vti_nexttolasttimemodified:TR|22 Jan 2016 17:05:28 -0000
+vti_cacheddtm:TX|28 Jul 2015 14:03:29 -0000
+vti_filesize:IR|4021
