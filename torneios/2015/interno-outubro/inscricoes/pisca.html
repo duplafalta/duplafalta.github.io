@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function piscando(){
+               
+                //Autor: Bruno Passos - Clandevelop Sistemas e Sites
+                //http://www.clandevelop-sistemas-e-sites.blogspot.com
+               
+                var tempo = 500; //1000 = 1s      
+               
+                blinks = document.getElementsByTagName("blink");    
+                for(var i=0;i<blinks.length;i++){
+                                if(blinks[i].getAttribute("style")=="VISIBILITY: hidden"){                              
+                                                blinks[i].setAttribute("style", "VISIBILITY: visible");                         
+                                }else{                   
+                                                blinks[i].setAttribute("style", "VISIBILITY: hidden");                       
+                                }
+                }                             
+                setTimeout('piscando()', tempo);            
+}
+</script>
+</head>
+<body onload="piscando();"> 
+
+  <blink>
+  <div>
+	<p align="center">
+	<font face="Arial" style="font-size: 16pt; font-weight: 700">INSCRIÇÕES 
+	ENCERRADAS</font></div>
+  </body>
+</html>
