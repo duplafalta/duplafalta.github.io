@@ -1,0 +1,125 @@
+#######################################################################
+#                           MURAL DE RECADOS                          # 
+#                                v 2.3.6                              #
+#                   Script criado e testado por Inter4u               #
+#                     Eldon Pinheiro - Brumado - BA                   #
+#          Esse script é gratuito e pode ser usado livremente         #
+#             Peço que deixe o meu link de email no final             #
+#          Para relatar bugs e novidades, favor contactar-me          #
+#                        eldonpinheiro@gmail.com                      #
+#######################################################################
+
+
+VERSÃO ATUAL = 2.3.6
+
+
+MODIFICAÇõES 2.3.6
+-----------------------------
+- Possibilidade de escolha da imagem de segurança
+- Template alterado
+- Correção de Javascript
+- Possibilidade de edição de smilies
+- Comentários nos posts
+- Correção de Bugs
+
+MODIFICAÇõES 2.3.5
+-----------------------------
+- Remoção do verificador de imagens da biblioteca GD
+- Mostra o IP da pessoa
+- Mostra o Código da mensagem
+- Contribuído por André - e-mail: andrenx@brtubo.com
+
+MODIFICAÇõES 2.3.3
+-----------------------------
+- Correção de Bugs
+
+MODIFICAÇõES 2.3.2
+-----------------------------
+- Correção de Bugs
+- Corrigido problemas com segurança
+- Corrigido problemas com imagem de verificação
+- Corrigido layout do visualizar.php
+- Corrigido campo de login
+
+MODIFICAÇõES 2.3
+-----------------------------
+- Nova Administração
+- Moderação de mensagens
+- Backup e restauração
+- Código de postagem
+- Bloqueio de IPs
+- Novos templates
+
+MODIFICAÇõES 2.2
+-----------------------------
+- Código fonte melhorado
+- Correção no sistema de templates
+- Nova administração
+- Login usando sessões
+- Senhas Criptografadas
+- Novos templates
+- Correção do bug de mensagens duplicadas
+- Nova função de login
+
+MODIFICAÇõES 2.1 pq
+-----------------------------
+- Correção do bug de paginação no psql
+- Contribuído por Ribamar FS
+
+MODIFICAÇõES 2.0 pq
+-----------------------------
+- Adaptação para banco de dados PostgreeSQL
+- Contribuído por Ribamar FS
+
+
+MODIFICAÇõES 2.0
+-----------------------------
+- Código totalmente remodelado
+- Uso de classes para templates
+- Uso de classes para paginação
+- Possibilidade de alteração de templates
+- Edição de filtros de censura via admin
+- Correção do bug de mensagens duplicadas
+- Script mais leve e funcional
+
+MODIFICAÇõES 1.4
+-----------------------------
+- Novo template
+- Código melhorado
+- Filtro de palavras censuradas
+- Anti-Flood
+- Correção de Bugs
+- Nova tabela
+- Script mais leve
+
+MODIFICAÇõES 1.3
+-----------------------------
+
+- Smilies Complementados
+- Nova tabela do banco de dados
+- Adicionada novas funções na administração
+- Alteração de usuário e senha pela administração
+- Instalação mais completa e fácil
+- Possibilidade de alteração de idioma
+- Código melhorado
+
+MODIFICAÇõES 1.2
+-----------------------------
+
+- Adicionado Smilies
+- Adicionada novas funções na administração
+- Código melhorado
+
+MODIFICAÇõES 1.1
+-----------------------------
+
+- Adicionado novo filtro para correta digitação dos campos
+- Adicionada novas funções na administração
+- Editar posts
+- Menu mais simples
+
+
+DÚVIDAS
+-----------------------------
+Qualquer dúvida, relato de bugs ou outros, favor entrar em contato
+Email = eldonpinheiro@gmail.com

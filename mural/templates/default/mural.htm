@@ -1,0 +1,129 @@
+<html>
+<head>
+<!-- ---------------------------------------------------------------- -->
+<!--                      Inter4u - Eldon Pinheiro                    -->
+<!-- ---------------------------------------------------------------- -->
+<title>{Titulo}</title>
+<script src="mural.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+    scrollbar-face-color:#C0C0C0;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-3dlight-color:#C0C0C0;
+    scrollbar-darkshadow-color:#000000;
+    scrollbar-shadow-color:#808080;
+    scrollbar-arrow-color:#8B8B8B;
+    scrollbar-track-color:#E0E0E0;
+}
+.style3 {color: #FF6600; font-weight: bold; }
+.td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #0099FF;
+}
+body {
+	margin-top: 5px;
+}
+.erro {
+	border: 1px dotted #3399FF;
+}
+.style5 {color: #808080}
+.td2 {
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #0099FF;
+}
+.style6 {color: #FF6600}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FF6600;
+}
+a:hover {
+	text-decoration: none;
+	color: #0066FF;
+}
+a:active {
+	text-decoration: none;
+}
+.recados {
+	border: 1px solid #C9C9C9;
+	color: #000000;
+}
+.style7 {color: #000000}
+.campos {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	border: 1px solid #C9C9C9;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="550" border="0" align="center" cellpadding="3" cellspacing="0">
+  <tr>
+    <td colspan="3" class="td" height="52">
+	<p align="center"><img src="imagens/mural_laranja.gif" width="200" height="20"></td>
+  </tr>
+  <tr>
+    <td colspan="3"><div align="left">
+      <p>Exibindo <span class="style3">{Nav4}</span> de <span class="style3">{Nav5}</span> p&aacute;ginas totalizando <span class="style3">{Tr}</span> recados <br>
+        {Nav}</p>
+      <p align="center"><span class="style6"><strong>{Menu1}</strong></span></p>
+    </div></td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN DYNAMIC BLOCK: erro -->
+<table width="550" border="0" align="center" cellpadding="5" cellspacing="0" class="erro">
+  <tr>
+    <td><div align=center class="style3">{Erro}</div></td>
+  </tr>
+</table>
+<br>
+<!-- END DYNAMIC BLOCK: erro -->
+<!-- BEGIN DYNAMIC BLOCK: tabela -->
+<table width="550" border="0" align="center" cellpadding="4" cellspacing="0" bgcolor="#F7F7F7" class="recados">
+  <tr valign="top">
+    <td height="36" colspan="2"><span class="style3">De: </span><a href="mailto:{Email}" class="style7">{Nome}</a><br>
+    <span class="style3">Para: </span>{Para}<br>
+    <span class="style3">Cidade: </span>{Cidade} 
+    <div align="right"></div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="justify">{Mensagem}</div></td></tr>
+  <tr bgcolor="#E1E1E1">
+    <td width="63%" bgcolor="#E1E1E1">postado em {Data}</td>
+    <td width="37%" bgcolor="#E1E1E1" class="style5"><div align="right"><a href="javascript:popup('comentario.php?id_post={IDPost}',380,500,'yes','Comentario',10, 200);">coment&aacute;rios[{NComentarios}]</a></div></td>
+  </tr>
+</table>
+<br>
+<!-- END DYNAMIC BLOCK: tabela -->
+<br>
+<table width="550" border="0" align="center" cellpadding="3" cellspacing="0" class="td2">
+  <tr>
+    <td><div align="center"><span class="style6"><strong>{Menu1}</strong></span> | <span class="style3">{Menu2}
+    </span></div><br>{Nav}</td>
+  </tr>
+</table>
+<div align="center"><br>
+</div>
+</body>
+</html>

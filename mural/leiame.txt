@@ -1,0 +1,110 @@
+#######################################################################
+#                           MURAL DE RECADOS                          # 
+#                                v 2.3.6                              #
+#                   Script criado e testado por Inter4u               #
+#                     Eldon Pinheiro - Brumado - BA                   #
+#          Esse script é gratuito e pode ser usado livremente         #
+#             Peço que deixe o meu link de email no final             #
+#          Para relatar bugs e novidades, favor contactar-me          #
+#                        eldonpinheiro@gmail.com                      #
+#######################################################################
+
+CONFIGURAÇÃO
+-----------------------------
+Para instalar esse script é muito simples, mas é preciso seguir alguns detalhes.
+É preciso um servidor com PHP 4.0 ou superior e Mysql instalados.
+
+INSTALAÇÃO
+-----------------------------
+Envie todos os arquivos para uma pasta no servidor.
+Altere a permissão do arquivo config.php para (chmod 666).
+Essa alteração pode ser feita com qualquer Programa de FTP.
+Recomendo o CuteFTP (www.globalscape.com).
+Abra no navegador o arquivo instalar.php Ex:(http://www.seusite.com/mural/instalar.php).
+Siga as instruções que aparecem na tela.
+Se você tiver outra versão do mural istalada, podera escolher uma atualização disponível
+Se aparecer mensagens de erro, verifique se as configurações estão corretas.
+Após a instalação, recomendo EXCLUIR o arquivo instalar.php.
+
+UTILIZAÇÃO
+-----------------------------
+O script é muito fácil de ser instalado e utilizado, para entrar na administração
+é só fornecer o nome de usuário e senha que vc configura durante a instalação,
+o endereço é admin.php
+Você pode acessar a administração apertando a tecla (F2).
+Lá você poderá excluir mensagens, editá-las e limpar o banco de dados.
+Também são definidas as configurações de usuário e senha caso deseje mudar.
+
+FILTRO DE PALAVRAS CENSURADAS
+-----------------------------
+Em sua nova versão, o script incorpora uma função contra palavrões, mas para isso ocorrer,
+é preciso que você adicione as palavras que achar necessário.
+Através da administração é possível adicionar ou excluir filtros.
+Obs: As palavras devem ser configuradas com bastante critério, pois
+outras palavras poderão ser alteradas. EX:
+Filtro                 = porca
+Censura aplicada       = P*
+Palavra no mural       = enporcalhada
+Fica Assim após filtro = emp*lhada.
+
+PROTEÇÃO CONTRA FLOOD
+-----------------------------
+Essa função impede que uma mesma pessoa poste mais de uma mensagem em um curto espaço de tempo.
+Para isso, basta que na hora da instalação, você escolha em quantos minutos essa pessoa poderá
+postar novamente.
+Obs: Deixando em 0, desabilita a proteção.
+
+
+MODERANDO MENSAGENS
+-----------------------------
+O mural conta agora com um sistema de moderação de mensages, ou seja, vc pode primeiro
+ver as mensagens que o pessoal postou e só depois liberá-las no mural, é útil para evitar
+problemas envolvendo politicas, brigas, etc.
+Vc acessa essa opção na administração no momento de editá-las.
+Quando uma mensagem estiver em vermelho, ela estará bloqueada, vc deve clicar na chave,
+assim ela ficara azul e poderá ser vista no moral.
+A opção de moderação poderá ser retirada clicando em ajustes e depois desmarcando o campo
+moderar mensagens.
+
+BACKUP
+-----------------------------
+Agora você poderá efetuar backups de seu banco de dados e assim preservar os dados do mural.
+Recomendo que se faça uma vez por semana, assim os dados ficarão garantido caso eles se percam
+Se por acaso você acabar perdendo os dados, poderá restaurá-los usando a administração.
+
+
+USANDO TEMPLATES
+-----------------------------
+Você poderá editar o template padrão ou criar um do seu jeito.
+Para editar, acesse a pasta templates/default e edite os arquivos .htm
+no seu editor de páginas preferido (Dreamweaver, FrontPage, GoLive, etc).
+Obs: Não apague ou altere os valores que estão entre {} (chaves).
+Não retire as tags especiais que estão no html. Ex: <!-- -->.
+Para alterar um template, edite os css que se encontram dentro do próprio
+html do arquivo a ser alterado, fica mais fácil e funcional.
+
+SEGURANÇA NA ENTRADA
+-----------------------------
+O script agora usa um novo sistema de login, mais seguro e funcional.
+Ele utiliza sessões e criptografia na senha do administrador.
+Se por acaso você perder ou esquecer a senha, terá que me contactar
+para contruir outra, é que uma senha criptografada não pode mais ser
+utilizada, somente cadastrando outra senha.
+
+EDIÇÃO DE SMILIES
+-----------------------------
+Agora é possivel adicionar ou excluir os smilies facilmente.
+Acesse a opção adicionar no menu Smilies da Administração
+para adicionar smilies.
+Obs. É preciso que a pasta imagens/smilies tenha permissão de leitura.
+
+IMAGEM DE SEGURANÇA
+-----------------------------
+Devido a problemas com a blblioteca GD, o mural agora oferece a opção
+de utilizar ou não a imagem de segurança.
+Isso é feito no momento da instalação ou acessando o menu ajustes na administração.
+
+DÚVIDAS
+-----------------------------
+Qualquer dúvida, relato de bugs ou outros, favor entrar em contato
+Email = eldonpinheiro@gmail.com

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Nova pagina 1</title>
+</head>
+
+<body>
+
+<html> 
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function (event) {
+            $(this).jPlayer("setMedia", {
+                mp3:"http://77.68.106.224:8018;stream/1"
+            }).jPlayer("play");
+        },
+
+
+        swfPath: "js",
+        supplied: "mp3", 
+        wmode: "window"
+    });
+});
+//]]>
+</script>
+</body>
+</html>

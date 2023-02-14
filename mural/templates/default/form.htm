@@ -1,0 +1,159 @@
+<html>
+<head>
+<!-- ---------------------------------------------------------------- -->
+<!--                      Inter4u - Eldon Pinheiro                    -->
+<!-- ---------------------------------------------------------------- -->
+<title>{Titulo}</title>
+<script src="mural.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+    scrollbar-face-color:#C0C0C0;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-3dlight-color:#C0C0C0;
+    scrollbar-darkshadow-color:#000000;
+    scrollbar-shadow-color:#808080;
+    scrollbar-arrow-color:#8B8B8B;
+    scrollbar-track-color:#E0E0E0;
+}
+.td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #0099FF;
+}
+body {
+	margin-top: 5px;
+}
+.erro {
+	border: 1px dotted #3399FF;
+}
+.td2 {
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #0099FF;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FF6600;
+}
+a:hover {
+	text-decoration: none;
+	color: #0066FF;
+}
+a:active {
+	text-decoration: none;
+}
+.recados {
+	border: 1px solid #C9C9C9;
+	color: #000000;
+}
+.campos {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	border: 1px solid #C9C9C9;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+.style1 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="10" leftmargin="0" marginheight="0" marginwidth="0">
+<div align="center"> 
+<form action="form.php" name="mural" method="post" onSubmit="document.getElementById('enviar').disabled = true">
+<input type="hidden" name="acao" value="cadastrar">
+<table width="500" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#F7F7F7" class="recados">
+<!-- BEGIN DYNAMIC BLOCK: Erro -->
+<tr bgcolor="#E1E1E1"><td colspan="2" valign="top" bgcolor="#E1E1E1">
+<div align="center" class="style1">{Erro}</div>
+</td>
+</tr>
+<!-- END DYNAMIC BLOCK: Erro -->
+<tr>
+<td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td>{IdiomaNome}:<br>
+      <input name="nome" type="text" class="campos" value="{Nome}" size="50" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td>{IdiomaPara}:<br>
+      <input name="para" type="text" class="campos" id="para" value="{Para}" size="50" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td>{IdiomaEmail}:<br>
+      <input name="email" type="text" class="campos" value="{Email}" size="50" maxlength="50"></td>
+  </tr>
+  <tr>
+    <td>{IdiomaCidade}:<br>
+      <input name="cidade" type="text" class="campos" value="{Email}" size="50" maxlength="50"></td>
+  </tr>
+  <tr>
+    <td>{IdiomaMensagem}:
+      <textarea name="comentario" cols="50" rows="5" class="campos" onFocus="ContaCaracteres();" onChange="ContaCaracteres();" onKeyDown="ContaCaracteres();" onKeyup='ContaCaracteres();' >{Mensagem}</textarea>
+      <br>
+{IdiomaCaracteres}
+<input name="caracteres" type="text" disabled class="campos" value="400" size="3" maxlength="3">
+{IdiomaCaracteres2}.</td>
+  </tr>
+</table>
+  <br>  </td>
+<td valign="top"> 
+<div align="center">
+ <strong><br>
+ Emoticons  </strong>
+  <br>
+  <table width="100%"  border="0" cellpadding="1">
+  <tr>
+    <td>
+<!-- BEGIN DYNAMIC BLOCK: Smilies -->
+	<a href="javascript:emoticon('{cod_smilie}')"><img src="imagens/smilies/{url_smilie}" hspace="2" vspace="2" border="0"></a>
+<!-- END DYNAMIC BLOCK: Smilies -->
+	</td>
+  </tr>
+</table>
+<br>      
+<b><a href="javascript:popup('smilies.php?acao=listar',250,400,'yes','Smilies',10, 500);">Mais Emoticons</a></b><a href="javascript:popup('ajuda.php',260,335,'no','Ajuda',10,500);"><b><br>
+{IdiomaCodigo}</b></a> </div></td>
+</tr>
+<!-- BEGIN DYNAMIC BLOCK: Imagem -->
+<tr> 
+<td height="42" colspan="2">
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="22%"><img src="biblioteca/img.php" border="0"></td>
+      <td width="78%">{IdiomaEscritoImagem}<br>
+        <input name="code" type="text" class="campos" id="code" size="8" maxlength="8"></td>
+    </tr>
+  </table></td>
+</tr>
+<!-- END DYNAMIC BLOCK: Imagem -->
+<tr> 
+<td width="265"><div align="center"><br>
+<input name="enviar" id="enviar" type="submit" class="botao" value="{IdiomaEnviar}">
+</div></td>
+<td width="265"><br> </td>
+</tr>
+</table>
+</form>
+{Copyright}
+</div>
+</body>
+ </html>
