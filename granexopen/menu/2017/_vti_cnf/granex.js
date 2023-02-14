@@ -1,0 +1,10 @@
+vti_encoding:SR|utf8-nl
+vti_author:SR|JUNIOR\\junior
+vti_modifiedby:SR|JUNIOR\\junior
+vti_timelastmodified:TR|07 Jul 2017 13:49:55 -0000
+vti_timecreated:TR|25 Jul 2016 16:34:15 -0000
+vti_extenderversion:SR|6.0.2.8161
+vti_backlinkinfo:VX|dupla-falta-2015/granexopen/menu/2015/Index.htm dupla-falta-2015/granexopen/menu/2014/Index.htm dupla-falta-2015/granexopen/menu/2013/Index.htm dupla-falta-2015/granexopen/menu/2016/Index.htm dupla-falta-2015/granexopen/fotos-old/index.html
+vti_nexttolasttimemodified:TR|07 Jul 2017 13:49:33 -0000
+vti_cacheddtm:TX|07 Jul 2017 13:49:55 -0000
+vti_filesize:IR|63390
