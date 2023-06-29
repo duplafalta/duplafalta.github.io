@@ -86,7 +86,129 @@ body {
 <div aligns="center">
 	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%">
 		<tr>
-			<td width="50%" height="300" style="border-left:medium none #FFFFFF; border-right:2px solid #FFFFFF; border-top:medium none #FFFFFF; border-bottom:medium none #FFFFFF; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#EFEFEF">
+			<td width="100%" bgcolor="#FFFFFF" height="100" style="border:medium none #999999; padding:2px; ">
+				<p align="center" style="margin-top: 0; margin-bottom: 0; ">			
+
+    <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var JFL_221783250571656 = new JotformFeedback({
+          formId: '221783250571656',
+          base: 'https://form.jotform.com/',
+          windowTitle: 'Granex Open 2023',
+          backgroundColor: '#FFA500',
+          fontColor: '#FFFFFF',
+          type: 'false',
+          height: 500,
+          width: 700,
+          openOnLoad: false
+        });
+    </script>
+    <script type="text/javascript">
+    var ifr = document.getElementById("lightbox-221783250571656");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
+      <a class="btn lightbox-221783250571656" 
+      style="
+      margin-top: 16px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      font-family: inherit;
+      text-shadow: none;
+      user-select: none;
+      transition: all,.1s,ease-in;
+      background-color: #FFA500;
+      border: 1px solid #FFA500;
+      color: #FFFFFF;
+      ">
+        CLIQUE AQUI PARA SE INSCREVER
+      </a>
+      	</td>
+		</tr>
+		<tr>
+			<td width="100%" height="250" style="border-left:medium none #FFFFFF; border-right:2px solid #FFFFFF; border-top:medium none #FFFFFF; border-bottom:medium none #FFFFFF; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#EFEFEF">
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<font face="Arial" style="font-size: 14pt; font-weight: 700">CLASSE MASCULINA</font><br><br>
 				<font face="Arial" style="font-size: 12pt"><b>Simples - 1ª, 2ª, 3ª, 4ª,5ª e Infantil até 12 anos</b></font><br><br>
@@ -106,7 +228,10 @@ body {
 				<font face="Arial" style="font-size: 10pt">Mínimo de 4 inscritos por classe ou 4 duplas</font></p>
 			</td>
 		
-			<td width="50%" style="border-left:2px solid #FFFFFF; border-right:medium none #FFFFFF; border-top:medium none #FFFFFF; border-bottom:medium none #FFFFFF; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" height="300" bgcolor="#EFEFEF">
+		</tr>
+		
+		<tr>
+			<td width="100%" height="250" style="border-left:medium none #CCCCCC; border-right:2px solid #CCCCCC; border-top:medium none #CCCCCC; border-bottom:medium none #CCCCCC; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<font face="Arial" style="font-size: 14pt; font-weight: 700">CLASSE FEMININA</font><br><br>
 				<font face="Arial" style="font-size: 12pt"><b>Simples - 1ª, 2ª, 
@@ -118,15 +243,134 @@ body {
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<br>			
 				<font face="Arial" style="font-size: 10pt">Mínimo de 4 inscritas por classe ou 4 duplas</font></p>
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				&nbsp;</p>
 			</td>
-
 		</tr>
 		
 		<tr>
-			<td width="50%" height="250" style="border-left:medium none #CCCCCC; border-right:2px solid #CCCCCC; border-top:medium none #CCCCCC; border-bottom:medium none #CCCCCC; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
-				<br>
+			<td width="100%" bgcolor="#EFEFEF" height="100" style="border:medium none #999999; padding:2px; ">
+				<p align="center" style="margin-top: 0; margin-bottom: 0; ">			
+
+    <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var JFL_221783250571656 = new JotformFeedback({
+          formId: '221783250571656',
+          base: 'https://form.jotform.com/',
+          windowTitle: 'Granex Open 2023',
+          backgroundColor: '#FFA500',
+          fontColor: '#FFFFFF',
+          type: 'false',
+          height: 500,
+          width: 700,
+          openOnLoad: false
+        });
+    </script>
+    <script type="text/javascript">
+    var ifr = document.getElementById("lightbox-221783250571656");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
+      <a class="btn lightbox-221783250571656" 
+      style="
+      margin-top: 16px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      font-family: inherit;
+      text-shadow: none;
+      user-select: none;
+      transition: all,.1s,ease-in;
+      background-color: #FFA500;
+      border: 1px solid #FFA500;
+      color: #FFFFFF;
+      ">
+        CLIQUE AQUI PARA SE INSCREVER
+      </a>
+      	</td>
+		</tr>
+		
+		<tr>
+			<td width="100%" height="250" style="border-left:medium none #CCCCCC; border-right:2px solid #CCCCCC; border-top:medium none #CCCCCC; border-bottom:medium none #CCCCCC; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
 				<p align="center" style="margin-top: 0; margin-bottom: 0; ">
 				<font face="Arial" style="font-size: 14pt; font-weight:700">VALOR DAS INSCRIÇÕES PARA ASSOCIADOS</font><br><br>
 				<font face="Arial"><span style="font-size: 8pt">R$</span> <b>75,00</b> para 01 <font size="2">(uma)</font> Classe</font><br>
@@ -138,23 +382,147 @@ body {
 				<p align="center" style="margin-top: 0; margin-bottom: 0; ">
 				<font face="Arial"><span style="font-size: 8pt">R$</span> <b>180,00</b> para 04 <font size="2">(quatro)</font> Classes</font></p>
 			</td>
-			<td width="50%" height="250" style="border-left:2px solid #CCCCCC; border-right:medium none #CCCCCC; border-top:medium none #CCCCCC; border-bottom:medium none #CCCCCC; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
+		</tr>
+		
+		<tr>
+			<td width="100%" height="250" style="border-left:medium none #CCCCCC; border-right:2px solid #CCCCCC; border-top:medium none #CCCCCC; border-bottom:medium none #CCCCCC; padding-left:2px; padding-right:2px; padding-top:1px; padding-bottom:1px" bgcolor="#EFEFEF">
+				<br>
 				<p align="center" style="margin-top: 0; margin-bottom: 0; ">
-				<font face="Arial" style="font-size: 14pt; font-weight:700">VALOR DAS INSCRIÇÕES PARA 
-				NÃO ASSOCIADOS</font><br><br>
+				<font face="Arial" style="font-size: 14pt; font-weight:700">VALOR DAS INSCRIÇÕES PARA NÃO ASSOCIADOS</font><br><br>
 				<font face="Arial"><span style="font-size: 8pt">R$</span> <b>95,00</b> para 01 <font size="2">(uma)</font> Classe</font><br>
 				<font face="Arial"><br><span style="font-size: 8pt">R$</span> <b>160,00</b> para 02 <font size="2">(duas)</font> Classes</font><br><br>
 				<font face="Arial"><span style="font-size: 8pt">R$</span> <b>220,00</b> para 03 <font size="2">(três)</font> Classes</font></p>
 				<p align="center" style="margin-top: 0; margin-bottom: 0; ">
 				<br>
-				</p>
-				<p align="center" style="margin-top: 0; margin-bottom: 0; ">
 				<font face="Arial"><span style="font-size: 8pt">R$</span> <b>280,00</b> para 04 <font size="2">(quatro)</font> Classes</font></p>
 			</td>
 		</tr>
 		
 		<tr>
-			<td width="100%" bgcolor="#EFEFEF" colspan="2" height="250" style="border:medium none #999999; padding:2px; ">
+			<td width="100%" bgcolor="#FFFFFF" height="100" style="border:medium none #999999; padding:2px; ">
+				<p align="center" style="margin-top: 0; margin-bottom: 0; ">			
+
+    <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var JFL_221783250571656 = new JotformFeedback({
+          formId: '221783250571656',
+          base: 'https://form.jotform.com/',
+          windowTitle: 'Granex Open 2023',
+          backgroundColor: '#FFA500',
+          fontColor: '#FFFFFF',
+          type: 'false',
+          height: 500,
+          width: 700,
+          openOnLoad: false
+        });
+    </script>
+    <script type="text/javascript">
+    var ifr = document.getElementById("lightbox-221783250571656");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
+      <a class="btn lightbox-221783250571656" 
+      style="
+      margin-top: 16px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      font-family: inherit;
+      text-shadow: none;
+      user-select: none;
+      transition: all,.1s,ease-in;
+      background-color: #FFA500;
+      border: 1px solid #FFA500;
+      color: #FFFFFF;
+      ">
+        CLIQUE AQUI PARA SE INSCREVER
+      </a>
+      	</td>
+		</tr>
+	
+		<tr>
+			<td width="100%" height="250" style="border:medium none #999999; padding:2px; " bgcolor="#EFEFEF">
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<img border="0" src="https://duplafalta.com.br/images/pix-logo.png" width="196" height="93"><br>
 				<font face="Arial" color="#000000" size="2">CNPJ</font>
@@ -216,7 +584,7 @@ body {
 		</tr>
 	
 		<tr>
-			<td width="100%" bgcolor="#FFFFFF" colspan="2" height="200" style="border:medium none #999999; padding:2px">
+			<td width="100%" bgcolor="#FFFFFF" height="200" style="border:medium none #999999; padding:2px">
 				<br>
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<font face="Arial" color="#1F2223" size="3">Após o depósito clique abaixo e informe o pagamento.</font><br><br>
@@ -227,14 +595,138 @@ body {
 		</tr>
 		
 		<tr>
-			<td width="100%" colspan="2" style="border-style:none; border-width:medium; padding:2px; " bgcolor="#EFEFEF">
+			<td width="100%" style="border-style:none; border-width:medium; padding:2px; " height="200" bgcolor="#EFEFEF">
 				<p align="center" style="margin-top: 0; margin-bottom: 0">
 				<font face="Arial" size="4">Data Limite para Inscrições: 03/07/2023 - Segunda-feira</font><br><br>
-				<iframe name="contagem" src="https://duplafalta.com.br/granexopen/2023/contagem/index.html" marginwidth="0" marginheight="0" scrolling="no" border="0" frameborder="0" width="440" height="80"></iframe><br><br>
-				<font face="Arial" size="4">Sorteio das Chaves dia 04/07/2022 - Terça-feira</font><br>
-				<script type="text/javascript" src="https://form.jotform.com/jsform/221783250571656"></script></p>
+				<iframe name="contagem" src="https://duplafalta.com.br/granexopen/2023/contagem/index.html" marginwidth="0" marginheight="0" scrolling="no" border="0" frameborder="0" width="440" height="80"></iframe></p>
+				<p align="center" style="margin-top: 0; margin-bottom: 0">
+				<br>
+				<font face="Arial" size="4">Sorteio das Chaves dia 04/07/2022 - Terça-feira</font></p>
 			</td>
 		</tr>
+		
+			<tr>
+			<td width="100%" bgcolor="#FFFFFF" height="100" style="border:medium none #999999; padding:2px; ">
+				<p align="center" style="margin-top: 0; margin-bottom: 0; ">			
+
+    <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var JFL_221783250571656 = new JotformFeedback({
+          formId: '221783250571656',
+          base: 'https://form.jotform.com/',
+          windowTitle: 'Granex Open 2023',
+          backgroundColor: '#FFA500',
+          fontColor: '#FFFFFF',
+          type: 'false',
+          height: 500,
+          width: 700,
+          openOnLoad: false
+        });
+    </script>
+    <script type="text/javascript">
+    var ifr = document.getElementById("lightbox-221783250571656");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
+      <a class="btn lightbox-221783250571656" 
+      style="
+      margin-top: 16px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      font-family: inherit;
+      text-shadow: none;
+      user-select: none;
+      transition: all,.1s,ease-in;
+      background-color: #FFA500;
+      border: 1px solid #FFA500;
+      color: #FFFFFF;
+      ">
+        CLIQUE AQUI PARA SE INSCREVER
+      </a>
+      	</td>
+			</tr>
 		
 		</table>
 </div>
