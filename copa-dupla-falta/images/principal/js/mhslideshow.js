@@ -10,8 +10,8 @@
 	
 		// options
 		var defaults = {
-			width:				621,
-			height:				300,
+			width:				450,
+			height:				270,
 			firstSlide:			0,
 			interval:			3000,
 			effectMode:			'blind',			// blind, slide
