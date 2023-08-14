@@ -1,8 +1,8 @@
 <config Version="3.0" bSavedFiles="True">
   <slideshow>
     <slideshowStyle slideshowName="blindsshow">
-      <width>530</width>
-      <height>380</height>
+      <width>450</width>
+      <height>270</height>
       <scaleMode>scaleToFill</scaleMode>
       <firstSlide>0</firstSlide>
       <randomPlay>false</randomPlay>
@@ -43,8 +43,7 @@
     </slideshowStyle>
   </slideshow>
   <items>
-    <item StrFile="principal_files\1.png" StrTitle="" StrDescription="" bWebLink="True" StrURL="http://duplafalta.com.br/granexopen/inscricoes/index.html" StrTarget="_top"/>
-    <item StrFile="principal_files\2.png" StrTitle="" StrDescription="" bWebLink="True" StrURL="http://duplafalta.com.br/granexopen/inscricoes/index.html" StrTarget="_top"/>
-    <item StrFile="principal_files\3.png" StrTitle="" StrDescription="" bWebLink="True" StrURL="http://duplafalta.com.br/granexopen/inscricoes/index.html" StrTarget="_top"/>
+    <item StrFile="1.png" StrTitle="" StrDescription="" bWebLink="True" StrURL="http://duplafalta.com.br/copa-dupla-falta/" StrTarget="_top"/>
+    <item StrFile="2.png" StrTitle="" StrDescription="" bWebLink="True" StrURL="http://duplafalta.com.br/copa-dupla-falta/" StrTarget="_top"/>
   </items>
 </config>
