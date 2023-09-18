@@ -117,56 +117,57 @@
                     font: this.$.data('font') || 'Arial',
                     fontWeight: this.$.data('font-weight') || 'bold',
                     inline : false,
-                    step : this.$.data('step') || etTimeout(
-                                    function () { m *= 2; }, 30
-                                );
-                            }
-                        }
+                    step : this.$.data('step') || 1,
+                    rotation: this.$.data('rotation'),
+
+                    // Hooks
+                    draw : null, // function () {}
+                    change : null, // function (value) {}
+                    cancel : null, // function () {}
+                    release : null, // function (value) {}
+
+                    // Output formatting, allows to add unit: %, ms ...
+                    format: function(v) {
+                        return v;
+                    },
+                    parse: function (v) {
+                        return parseFloat(v);
                     }
-                )
-                .bind(
-                    "keyup"
-                    ,function (e) {
-                        if (isNaN(kval)) {
-                            if (to) {
-                                window.clearTimeout(to);
-                                to = null;
-                                m = 1;
-                                s.val(s.$.val());
-                            }
-                        } else {
-                            // kval postcond
-                            (s.$.val() > s.o.max && s.$.val(s.o.max))
-                            || (s.$.val() < s.o.min && s.$.val(s.o.min));
+                }, this.o
+            );
+
+            // finalize options
+            this.o.flip = this.o.rotation === 'anticlockwise' || this.o.rotation === 'acw';
+            if(!this.o.inputColor) {
+                this.o.inputColor = this.o.fgColor;
+            }
+
+            // routing value
+            if(this.$.is('fieldset')) {
+
+                // fieldset = array of integer
+                this.v = {};
+                this.i = this.$.find('input');
+                this.i.each(function(k) {
+                    var $this = $(this);
+                    s.i[k] = $this;
+                    s.v[k] = s.o.parse($this.val());
+
+                    $this.bind(
+                        'change blur'
+                        , function () {
+                            var val = {};
+                            val[k] = $this.val();
+                            s.val(val);
                         }
+                    );
+                });
+                this.$.find('legend').remove();
 
-                    }
-                );
+            } else {
 
-            this.$c.bind("mousewheel DOMMouseScroll", mw);
-            this.$.bind("mousewheel DOMMouseScroll", mw)
-        };
-
-        this.init = function () {
-
-            if (
-                this.v < this.o.min
-                || this.v > this.o.max
-            ) this.v = this.o.min;
-
-            this.$.val(this.v);
-            this.w2 = this.w / 2;
-            this.cursorExt = this.o.cursor / 100;
-            this.xy = this.w2 * this.scale;
-            this.lineWidth = this.xy * this.o.thickness;
-            this.lineCap = this.o.lineCap;
-            this.radius = this.xy - this.lineWidth / 2;
-
-            this.o.angleOffset
-            && (this.o.angleOffset = isNaN(this.o.angleOffset) ? 0 : this.o.angleOffset);
-
-            this.o.angleArc
-            && (ththis.i = this.$;
+                // input = integer
+                this.i = this.$;
                 this.v = this.o.parse(this.$.val());
                 (this.v === '') && (this.v = this.o.min);
 
