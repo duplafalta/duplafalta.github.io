@@ -53,7 +53,9 @@
     "mbrsiteDomain": "x2pd8ocxq2",
     "uniqCompNum": 12,
     "versionPublish": "5.9.13",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "publishType": "local",
+    "publishPath": "file:///B:/duplafalta.github.io"
   },
   "pages": {
     "index.html": {
