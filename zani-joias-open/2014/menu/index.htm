@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>menu - Drop Down Menu Generator</title>
+    <title>zani - Dropdown Menu Generator</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta http-equiv="cache-control" content="max-age=0" /> 
     <meta http-equiv="cache-control" content="no-cache" /> 
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" /> 
@@ -14,59 +14,33 @@
 
     <style type="text/css">
 
-        BODY
-        {
-	        font-family:Arial;
-	        font-size:14px;
+        BODY {
+            margin: 12px;
+	        font-family: Arial;
+	        font-size: 14px;
         }
 
-        #Container
-        {
-            /*width:960px;*/
-            margin:0 auto;
+        #Header, #Navigation, #LeftColumn, #MainArea, #Footer {
+            margin-bottom: 12px;
+            padding: 8px;
+            color: #666;
+            background-color: #EAEAEA;
         }
 
-        #Header, #Navigation, #LeftColumn, #Footer
-        {
-            background-color:#F8F8F8;
-            border:dashed 1px #E0E0E0;
-            color:Silver;
+        #Columns {
+            display: flex;
         }
 
-        #Header{
-            padding:8px;
-            height:32px;
-            margin-bottom:12px;
+        #LeftColumn {
+            min-width: 200px;
+            min-height: 400px;
         }
 
-        #Navigation
-        {
-            padding:2px;
-            margin-bottom:12px;
-        }
-
-        #LeftColumn
-        {
-            padding:8px;
-            width:200px;
-            height:400px;
-            max-width:600px;
-            vertical-align:top;
-        }
-
-        #RightColumn
-        {
-            padding:24px;
-            padding-left:36px;
-            overflow:auto;
-            vertical-align:top;
-        }
-
-        #Footer
-        {
-            padding:8px;
-            clear:both;
-            margin-top:12px;
+        #MainArea {
+            margin-left: 12px;
+            flex-grow: 1;
+            background-color: #FFF;
+            color: #000;
         }
 
     </style>
@@ -75,19 +49,16 @@
 
 <body>
 
-    <div id="Container">
-
-        <div id="Header">Header</div>
+    <div id="Header">Header</div>
         
-        <div id="Navigation">
-            <script type="text/javascript" src="menu/menu.js?h=E47F"></script>
-            <div id="menu"></div>
-        </div>
+    <div id="Navigation">
+        <script type="text/javascript" src="./zani/zani.js?h=2C5B"></script>
+        <div id="zani"></div>
+    </div>
         
-        <table border="0" cellpadding="0" cellspacing="0">
-        <tr>
-        <td id="LeftColumn">Left Column</td>
-        <td id="RightColumn">Your menu is in the "<b>menu</b>" folder. It includes the main JavaScript file "<b>menu.js</b>" and a few accompanying files.
+    <div id="Columns">
+        <div id="LeftColumn">Left Column</div>
+        <div id="MainArea">Your menu is in the "<b>zani</b>" folder. It includes the main JavaScript file "<b>zani.js</b>" and a few accompanying files.
 
 
 <br/><br/><br/>
@@ -97,7 +68,7 @@
 <ol>
 
     <li>
-		Copy (upload) the "<b>menu</b>" folder to the root directory of your website.
+		Copy (upload) the "<b>zani</b>" folder to the root directory of your website.
     </li>
 
     <br/>
@@ -105,19 +76,19 @@
 		Copy and paste the code <sup>[1]</sup> below where you want your menu to show up. This code can be placed anywhere between the <b>&lt;body&gt;</b> and <b>&lt;/body&gt;</b> tags.
 		
 		<br/><br/>
-		<textarea style="width:100%;height:50px;" readonly><script type="text/javascript" src="./menu/menu.js?h=E47F"></script>
-<div id="menu"></div></textarea>
+		<textarea style="width:100%;height:50px;" readonly><script type="text/javascript" src="./zani/zani.js?h=2C5B"></script>
+<div id="zani"></div></textarea>
 
 		<br/><br/>
 		<sup>[1]</sup> The code above consists of the two parts:
 		
 		<br/><br/>
 		<ol>
-		<li>The <b>&lt;script&gt;</b> tag adds a reference to the main JavaScript file "<b>menu.js</b>". 
+		<li>The <b>&lt;script&gt;</b> tag adds a reference to the main JavaScript file "<b>zani.js</b>". 
 		<br/>
-		If the page is located in a subfolder, use the <b>src</b> with two dots: <b>"../menu/menu.js"</b>.</li>
+		If the page is located in a subfolder, use the <b>src</b> with two dots: <b>"../zani/zani.js"</b>.</li>
 		<br/>
-		<li>The <b>&lt;div&gt;</b> element is a container for the menu. It includes the name of your menu ("<b>menu</b>") as an identifier.</li>
+		<li>The <b>&lt;div&gt;</b> element is a container for the menu. It includes the name of your menu ("<b>zani</b>") as an identifier.</li>
 		</ol>
 
     </li>
@@ -137,11 +108,23 @@
 		
 		<br/><br/>
 		<textarea style="width:100%;height:160px;overflow:auto;" wrap="off" readonly><noscript>
-<a href="index.html">Página Principal</a>
-<a href="resultados.html">Resultados</a>
+<a href="chaveamento-feminino-2.html">2ª Classe</a>
+<a href="chaveamento-masculino-1.html">1ª Classe</a>
+<a href="chaveamento-masculino-2.html">2ª Classe</a>
+<a href="chaveamento-masculino-3.html">3ª Classe</a>
+<a href="chaveamento-masculino-4.html">4ª Classe</a>
+<a href="chaveamento-masculino-5.html">5ª Classe</a>
+<a href="chaveamento-masculino-6.html">6ª Classe</a>
+<a href="chaveamento-infantil.html">Infantil</a>
+<a href="chaveamento-dupla-mista.html">Mistas</a>
+<a href="chaveamento-duplas-masculino-a.html">Classe A</a>
+<a href="chaveamento-duplas-masculino-b.html">Classe B</a>
+<a href="chaveamento-duplas-masculino-c.html">Classe C</a>
+<a href="programacao_simples.html">Simples</a>
+<a href="programacao_duplas.html">Duplas</a>
 <a href="regulamento.html">Regulamento</a>
-<a href="fotos.html">Fotos</a>
-<a href="inscricao.html">Inscrição</a>
+<a href="estatisticas.html">Estatísticas</a>
+<a href="inscritos.html">Tenistas Inscritos</a>
 </noscript></textarea>
 		
 		<br/><br/>
@@ -158,19 +141,16 @@
 <div style="font-size:18px;font-weight:bold;">Helpful Links</div>
 
 <ul>
-	<li><a href="http://dropdownmenugenerator.com/Blog.aspx?ID=20140314" target="_blank">Blog Post: Adding Drop Down Menu to a Web Page</a></li>
-	<li><a href="http://dropdownmenugenerator.com/FAQ.aspx" target="_blank">Frequently Asked Questions</a></li>
-	<li><a href="http://www.dropdownmenugenerator.com/Videos.aspx" target="_blank">Video Tutorials</a></li>
-	<li><a href="http://www.dropdownmenugenerator.com/ContactUs.aspx" target="_blank">Technical Support</a></li>
+	<li><a href="https://www.dropdownmenugenerator.com/blog/add-menu-page.aspx" target="_blank">Blog Post: Adding Dropdown Menu to a Web Page</a></li>
+	<li><a href="https://www.dropdownmenugenerator.com/faq.aspx" target="_blank">Frequently Asked Questions</a></li>
+	<li><a href="https://www.dropdownmenugenerator.com/videos.aspx" target="_blank">Video Tutorials</a></li>
+	<li><a href="https://www.dropdownmenugenerator.com/contactus.aspx" target="_blank">Technical Support</a></li>
 </ul>
 
-</td>
-        </tr>
-        </table>
- 
-        <div id="Footer">Footer</div>
-
+</div>
     </div>
+ 
+    <div id="Footer">Footer</div>
 
 </body>
 </html>
