@@ -19,5 +19,6 @@ vti_navbuttonnextlabel:SR|Avançar
 vti_approvallevels:VR|Aprovado Negado Revisão\\ pendente
 vti_showhiddenpages:IR|1
 vti_navbuttonhomelabel:SR|Home
+vti_dependenciesood:IR|0
 vti_featurelist:VX|vti_ACAll vti_ServiceMarkUrlDirBrowse vti_ServiceMarkUrlDirExec vti_ServiceMarkUrlDirScript vti_ACIPAddresses vti_ServerEmailTransport vti_ServerIndexServer vti_ServerASP vti_ServerCollab vti_ServerWebParts vti_RulesScript vti_TimedDocEvents
 vti_categories:VR|Viagens Relatório\\ de\\ despesas Negócios Competição Metas/objetivos Idéias Disposições\\ gerais Aguardando VIP Em\\ processo Planejamento Agenda
