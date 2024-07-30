@@ -1,0 +1,84 @@
+#container {
+
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+
+}
+
+
+.pwi_loader{
+	height: 100px;
+	width: 400px;
+	border: 2px solid #fff;
+}
+
+.pwi_container{
+	color: #000;
+	background-color: #fff;
+	font-family: Arial;
+	font-size: 8pt;
+	padding: 0px;
+}
+
+.pwi_container a{
+	color: #999;
+}
+
+.pwi_albums{
+margin: 20px;
+
+}
+
+.pwi_album_description{
+	text-align: left;
+	color: #999;
+	font-family: Verdana;
+	font-size: 12px;
+	padding: 0px;
+
+}
+.pwi_album_description .title{
+	font-size: 12pt;
+	margin-top: 10px;
+
+}
+.pwi_album_description .details{
+	font-size: 10px;
+	font-style: italic;
+}
+.pwi_album_description .description{
+	font-size: 10pt;
+	padding: 5px;
+}
+.pwi_album_description .sslink{
+
+}
+
+.pwi_album{
+	float: left;
+	padding: 0.5em;
+	text-align: center;
+	color: grey;
+}
+.pwi_album img{
+	border: 1px solid grey;
+}
+
+
+.pwi_photo{
+	float: left;
+	padding: 0.5em;
+	text-align: center;
+}
+.pwi_photo img{
+	border: 1px solid #fff;
+	margin: 5px;
+}
+
+.pwi_pager{
+	clear: both;
+}
+.pwi_pager_current{
+	font-weight: bold;
+}
