@@ -1,0 +1,10 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|08 Mar 2017 12:03:09 -0000
+vti_extenderversion:SR|6.0.2.8161
+vti_author:SR|JUNIOR\\junior
+vti_modifiedby:SR|JUNIOR\\junior
+vti_nexttolasttimemodified:TW|14 Jul 2015 19:57:51 -0000
+vti_timecreated:TR|14 Jul 2015 19:42:58 -0000
+vti_backlinkinfo:VX|
+vti_cacheddtm:TX|08 Mar 2017 12:03:33 -0000
+vti_filesize:IR|16385
