@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Editar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {
+	scrollbar-face-color:#6CB1F7;
+	scrollbar-highlight-color:#DFF2FD;
+	scrollbar-3dlight-color:#99D5F9;
+	scrollbar-darkshadow-color:#000000;
+	scrollbar-shadow-color:#0E7AE7;
+	scrollbar-arrow-color:#FFFFFF;
+	scrollbar-track-color:#CFEBFC;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	background-image: url(../imagens/bg_visualizar.jpg);
+}	
+.tabela {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+}
+.tabela3 {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	border-top: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	border-left: 1px solid #666666;
+}
+.tabela4 {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	border-top: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	border-left: 1px solid #666666;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+.campos {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	border: 1px solid #000000;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+.botao2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF0000;
+	border: 1px solid #000000;
+}
+.campos2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF0000;
+	border: 1px solid #000000;
+}
+.campoerro {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF0000;
+	border: 1px solid #FF0000;
+	background-color: #FFE1E1;
+}
+.regua {
+    border: 1px ridge;
+}
+</style></head>
+
+<body>
+<table width="100%" bgcolor="#FFFFFF" border="0" align="center" cellpadding="4" cellspacing="1" class="tabela3">
+  <tr> 
+    <td height="22" background="tpl/img/bg_menu.gif" bgcolor="#A3CEFA">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#CFEBFC"><strong>{Titulo}</strong></td>
+  </tr>
+</table><br>
+<!-- BEGIN DYNAMIC BLOCK: erro -->
+<table width="100%" bgcolor="#FFFFFF" border="0" align="center" cellpadding="4" cellspacing="1" class="tabela3">
+  <tr> 
+    <td height="22" background="tpl/img/bg_menu.gif" bgcolor="#A3CEFA">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#CFEBFC"><strong>{Erro}</strong></td>
+  </tr>
+</table>
+<!-- END DYNAMIC BLOCK: erro -->
+<!-- BEGIN DYNAMIC BLOCK: edicao -->
+<form action="?acao=editar_post&id={Codigo}&editar=sim" method="post" name="mural" id="mural">
+  <table width="100%" bgcolor="#FFFFFF" border="0" align="center" cellpadding="4" cellspacing="1" class="tabela3">
+    <tr> 
+      <td height="22" colspan="2" background="tpl/img/bg_menu.gif" bgcolor="#A3CEFA">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#F2E3D0"> 
+      <td width="16%" valign="top" bgcolor="#CFEBFC">{IdiomaNome}<br> </td>
+      <td width="84%" valign="top" bgcolor="#A3CEFA"> <input name="nome" type="text" class="campos" id="nome2" value="{Nome}" size="50" maxlength="50"></td>
+    </tr>
+    <tr bgcolor="#F2E3D0"> 
+      <td valign="top" bgcolor="#CFEBFC">{IdiomaPara}<br> </td>
+      <td valign="top" bgcolor="#A3CEFA"><input name="para" type="text" class="campos" id="para2" value="{Para}" size="50" maxlength="50"></td>
+    </tr>
+    <tr bgcolor="#F2E3D0"> 
+      <td valign="top" bgcolor="#CFEBFC">{IdiomaEmail}<br> </td>
+      <td valign="top" bgcolor="#A3CEFA"> <input name="email" type="text" class="campos" id="email2" value="{Email}" size="50" maxlength="100"></td>
+    </tr>
+<tr bgcolor="#F2E3D0"> 
+      <td valign="top" bgcolor="#CFEBFC">{Cidade}<br> </td>
+      <td valign="top" bgcolor="#A3CEFA"> <input name="cidade" type="text" class="campos" id="cidade" value="{Cidade}" size="50" maxlength="100"></td>
+    </tr>    <tr bgcolor="#FFCC99"> 
+      <td valign="top" bgcolor="#CFEBFC">{IdiomaMensagem}<br> </td>
+      <td valign="top" bgcolor="#A3CEFA"><textarea name="comentario" cols="50" rows="5" class="campos">{Msg}</textarea> 
+      </td>
+    </tr>
+    <tr bgcolor="#F2E3D0"> 
+      <td colspan="2" bgcolor="#5AA8F5"> <div align="center"> 
+          <input name="Submit" type="submit" class="botao" value="{IdiomaEnviar}">&nbsp;&nbsp;&nbsp;
+          <input name="Submit2" type="button" class="botao" value="Voltar" onClick="javascript:window.history.go(-1);">
+        </div></td>
+    </tr>
+  </table>
+</form>
+<!-- END DYNAMIC BLOCK: edicao -->
+</body>
+</html>

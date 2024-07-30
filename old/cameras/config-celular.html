@@ -1,0 +1,594 @@
+<html>
+<title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
+<link href='../../images/duplafalta.ico' rel='shortcut icon'/>
+<link href='../../images/duplafalta.png' rel='shortcut icon'/>
+<link href='../../images/duplafalta.png' rel='apple-touch-icon'/>
+<link href='../../images/duplafalta.png' rel='shortcut icon' type='image/x-icon'/>
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+<script language=JavaScript>
+<!--
+function desabilitar(){
+    alert ("Função desabilitada.\n\nDesculpe o incômodo.")
+    return false
+}
+document.oncontextmenu=desabilitar
+// -->
+</script> 
+
+<script type="text/javascript" async="" src="streaming/ga.js"></script>
+
+<script>(function installFakeGeolocationCode() {
+  var timerId = null;
+  if (!navigator.geolocation) {
+    return;
+  }
+  navigator.geolocation.getCurrentPosition_ = navigator.geolocation.getCurrentPosition;
+  navigator.geolocation.watchPosition_ = navigator.geolocation.watchPosition;
+  navigator.geolocation.clearWatch_ = navigator.geolocation.clearWatch;
+
+  navigator.geolocation.clearWatch = function (id) {
+    window.clearInterval(id);
+  };
+
+  function sendBackResponse (successCb, errorCb, options, jsonedResponse) {
+    var response = JSON.parse(jsonedResponse);
+    if (response.isEnabled) {
+      successCb({ 'coords': { 'latitude': response.lat, 'longitude': response.lng,
+        'accuracy': response.accuracy }, 'timestamp': new Date().getTime() });
+    } else {
+      navigator.geolocation.getCurrentPosition_(successCb, errorCb, options);
+    }
+  }
+
+  function createGetFakePosition(successCb, errorCb, options) {
+    return function () {
+      var positionElement = document.getElementById('fake_position_meta');
+      if (!positionElement) {
+        var interval = setInterval(function() {
+          positionElement = document.getElementById('fake_position_meta');
+          if (positionElement) {
+            clearInterval(interval);
+            sendBackResponse(successCb, errorCb, options, positionElement.getAttribute('content'));
+          }
+        }, 200 /* ms */);
+      } else {
+        // we already have the div, no need for intervals etc.
+        sendBackResponse(successCb, errorCb, options, positionElement.getAttribute('content'));
+      }
+    };
+  };
+
+  navigator.geolocation.getCurrentPosition = function (cb1, cb2, options) {
+    var getFakePosition = createGetFakePosition(cb1, cb2, options);
+    getFakePosition();
+  };
+
+  navigator.geolocation.watchPosition = function (cb1, cb2, options) {
+    var getFakePosition = createGetFakePosition(cb1, cb2, options);
+    getFakePosition();
+    if (timerId) {
+      window.clearInterval(timerId);
+    }
+    timerId = window.setInterval(getFakePosition, 5 * 1000);
+    return timerId;
+  };
+})();</script><head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Dupla Falta - Cameras Campestre ao vivo</title>
+<script language="JavaScript">
+<!--
+var    chasm	=   screen.availWidth;
+var    mount    =   screen.availHeight;
+var    IpAddress =   0;
+var    LivexExist =false;
+
+var    sizeFlag1 = 1;
+var    sizeFlag2 = 1;
+
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();
+
+
+function Play()
+{   
+  	CreateX(); 
+  if( LivexExist ){    
+  
+  try{  
+  	
+	
+	
+	
+	document.WebCamX1.IpAddress= "http://177.54.96.158";  
+  	document.WebCamX1.SetCntDeviceType(0);
+	document.WebCamX1.EnableAutoScreenSize(1);
+        document.WebCamX1.CommandPort = 4550;
+    	document.WebCamX1.DataPort = 5550;
+    	document.WebCamX1.AudioDataPort = 6550;
+    	document.WebCamX1.AutoSetCamera = 2;
+    	document.WebCamX1.Username = "guest";
+    	document.WebCamX1.Password = "";
+    	document.WebCamX1.DisablePWD = 1;
+		document.WebCamX1.DefaultCam = 1;
+		document.WebCamX1.PlayX();  
+      
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   } 
+   }  
+  
+}
+
+
+
+function PTZControl()
+{
+ if( LivexExist ){
+   try{
+   
+       
+       document.WebCamX1.SetInfo(94,0,0,"",0);
+     
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }
+}
+
+
+function ShowSystemMenu()
+{  
+ if( LivexExist ){     
+  try{   
+        document.WebCamX1.ShowSYSMenu();  
+      
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }   
+ }   
+}
+
+
+function IOControl()
+{
+  if( LivexExist ){
+   try{   
+        
+        document.WebCamX1.SetInfo(107,0,0,"",0);
+     
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+  }
+}
+
+
+
+
+function FileSave()
+{
+ if( LivexExist ){
+   try{
+   
+       document.WebCamX1.SaveX();
+     
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }
+}
+
+
+function Stop()
+{
+ if( LivexExist ){
+  try{
+   
+       document.WebCamX1.StopX();  
+      
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }     	
+}
+
+function Zoom()
+{
+ if( LivexExist ){
+   try{       
+      document.WebCamX1.FullScreenX();  	    	       
+     
+     }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }
+}
+
+
+
+
+
+function SnapShot()
+{
+ if( LivexExist ){
+  try{
+  
+   document.WebCamX1.SnapShotX();
+       
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+  }
+ }
+}
+
+
+function ShowCamMenu()
+{    
+ if( LivexExist ){   
+  try{    
+       document.WebCamX1.ShowCamMenuX();
+    
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+  }
+ }  
+}
+
+function ChangeQuality()
+{
+  if( LivexExist ){     
+   try{
+   	document.WebCamX1.ShowQulMenuX();  
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+  }   
+}
+
+function AudioControl()
+{     
+ if( LivexExist ){
+   try{
+   	document.WebCamX1.AudioControlX();  
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }  
+}
+
+function MicControl()
+{     
+ if( LivexExist ){
+   try{
+   	document.WebCamX1.MicControlX();  
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+   }
+ }  
+}
+
+
+function CreateX()
+{ 
+ 
+  try{
+  	document.WebCamX1.CreateX();
+  	if(IpAddress == 0) 
+  	{
+  	  document.WebCamX1.IpAddress= document.location;  	
+  	}
+  	else
+  	{
+  	  document.WebCamX1.IpAddress= IpAddress;
+  	}
+ 	 document.WebCamX1.CommandPort = CommandPort;
+    	 document.WebCamX1.DataPort = DataPort;
+    	 document.WebCamX1.AudioDataPort = AudioPort;
+    	 document.WebCamX1.AutoSetCamera = 1;
+    	 LivexExist=true;
+   }catch(e){
+	alert("ActiveX downloading please refresh");
+	LivexExist=false;
+   }
+ 
+}
+
+function DestroyX()
+{  
+ if( LivexExist ){
+  try{
+    document.WebCamX1.DestroyX();
+  }catch(e){
+	alert("ActiveX downloading please refresh");
+  }
+ }
+}
+
+function OCXChecker()
+{
+	OCXChecker1.StartOCXChecker("http://10.5.16.2:80/cab/LiveXOCXChecker.txt",document.location);
+
+}
+//-->
+  </script>
+<script id="clientEventHandlersJS" language="javascript"> 
+<!-- 
+function OCXCheckerComplete() { 
+	LivexExist=true;
+} 
+--> 
+  </script>
+<script id="clientEventHandlersJS" language="javascript"> 
+<!-- 
+function OCXCheckerDownloadComplete() { 
+   window.location.reload();
+} 
+--> 
+  </script>
+<script id="clientEventHandlersJS" language="javascript"> 
+<!-- 
+function OCXCheckerDownloadCancel() { 
+   window.close();
+} 
+--> 
+  </script>
+<script id="clientEventHandlersJS" language="javascript"> 
+<!-- 
+function OnUpdateTitle() {      
+   sTitle = WebCamX1.GetAlarmCaption();
+   document.title = sTitle;
+   
+   var IEName =BrowserDetect.browser;
+   var IEVersion = BrowserDetect.version;
+   var AppTitle = " - Microsoft Internet Explorer";
+   
+   if(IEName == "Explorer" && IEVersion == "7")
+   {
+   		AppTitle =  " - Windows Internet Explorer";   	
+  }
+  else
+  {
+  		AppTitle =  " - Microsoft Internet Explorer";
+  }	
+
+   sTemp = sTitle + AppTitle;
+   WebCamX1.PopupCurrentWindow(sTemp);     
+} 
+--> 
+  </script>
+<script language="JavaScript1.2" src="streaming/Server.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="streaming/setup.js" type="text/javascript"></script>
+<script language="javascript" for="OCXChecker1" event="Complete">
+<!--
+ OCXCheckerComplete()
+//-->
+  </script>
+<script language="javascript" for="OCXChecker1" event="DownloadComplete">
+<!--
+ OCXCheckerDownloadComplete()
+//-->
+  </script>
+<script language="javascript" for="OCXChecker1" event="DownloadCancel">
+<!--
+ OCXCheckerDownloadCancel()
+//-->
+  </script>
+<script language="javascript" for="WebCamX1" event="UpdateHTMLTitle">
+<!--
+ OnUpdateTitle();
+//-->
+  </script>
+<script language="javascript" for="WebCamX1" event="AlarmPopup">
+<!--
+ OnAlarmPopup();
+//-->
+</script>
+</head><meta id="fake_position_meta" name="fake_geolocation_chrome_extension" content="{&quot;isEnabled&quot;:true,&quot;lat&quot;:40.70838934913346,&quot;lng&quot;:-74.01008651855466,&quot;accuracy&quot;:100}">
+
+<body onload="OCXChecker(); Play();" style="text-align: center">
+<div id="spacer"></div>              	
+<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" bgcolor="#FFFFFF" height="205">
+<tr>
+<td valign="middle">
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<iframe name="I24" src="../../topo.html" marginwidth="1" marginheight="1" height="232" width="100%" scrolling="no" border="0" frameborder="0" align="center">
+</iframe>
+</td>
+</table>
+<div align="center">
+<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="60" bgcolor="#FFFFFF">
+<tr>
+<td>
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<iframe name="I25" src="../../menu/diretoria/menu.html" width="1025" marginwidth="0" marginheight="0" border="0" frameborder="0" scrolling="no" height="60">
+</iframe>
+<div align="center">
+<div align="center">
+<table border="0" width="1024" cellpadding="0" style="border-collapse: collapse">
+<tr>
+<td valign="middle">
+<p align="center">
+<iframe name="I26" marginwidth="0" marginheight="0" height="10" scrolling="no" border="0" frameborder="0">
+</iframe></td>
+</tr>
+</table>
+<table border="0" width="1024" cellpadding="0" bgcolor="#008080" style="border-collapse: collapse" height="396">
+	<tr>
+		<td width="1024">
+		<p align="center"><font face="Arial" color="#FFFFFF">- Para celulares 
+		com Sistema Operacional Android baixe o aplicativo GV-AView pelo Google 
+		Play Store;</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Para produtos 
+		Apple (iPhone, iPad, etc) baixe 
+		o aplicativo GV-iView pelo iTunes;</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Para celulares 
+		com com Sistema Operacional Windows Phone ainda não existe aplicativo para visualização das 
+		câmeras.</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Escolher a Opção
+		</font><font face="Arial" color="#FFFF00">DVR / NVR</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Endereço IP / 
+		Host: </font>
+		<font face="Arial" color="#FFFF00">duplafalta.no-ip.org (para Campestre)</font></p>
+		<p align="center">
+		<font face="Arial" color="#FFFF00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duplafalta-aabb.no-ip.org 
+		(para AABB)</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Porta: </font>
+		<font face="Arial" color="#FFFF00">8866</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Usuário: </font>
+		<font face="Arial" color="#FFFF00">Guest</font></p>
+		<p align="center"><font face="Arial" color="#FFFFFF">- Senha: </font>
+		<font face="Arial" color="#FFFF00">Deixar em branco</font></td>
+	</tr>
+</table>
+<div align="center">
+<table border="0" width="1024" cellpadding="0" style="border-collapse: collapse">
+<tr>
+<td valign="middle">
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<iframe name="I27" marginwidth="0" marginheight="0" height="4" scrolling="no" border="0" frameborder="0">
+</iframe></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</td></div>
+<div align="center">
+
+<div align="center">
+<div align="center">
+<div align="center">
+<div align="center">
+<div align="center">
+<div align="center">
+<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" bgcolor="#333333" height="50">
+<tr>
+<td>
+<p align="center" style="margin-top: 0; margin-bottom: 0">
+<iframe name="I28" src="../../rodape.html" marginwidth="0" marginheight="0" height="50" width="1024" scrolling="no" border="0" frameborder="0">
+</iframe></td>
+</tr>
+</table>
+</div>
+</div>
+</div></div>
+</div></div>
+<div class="clear"></div>
+<script language="javascript" type="text/javascript"><!--
+OCXChecker();
+//--></script>

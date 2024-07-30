@@ -1,0 +1,165 @@
+<html>
+<head>
+<!-- ---------------------------------------------------------------- -->
+<!--                      Inter4u - Eldon Pinheiro                    -->
+<!-- ---------------------------------------------------------------- -->
+<title>{Titulo}</title>
+<script src="mural.js"></script>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+    scrollbar-face-color:#C0C0C0;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-3dlight-color:#C0C0C0;
+    scrollbar-darkshadow-color:#000000;
+    scrollbar-shadow-color:#808080;
+    scrollbar-arrow-color:#8B8B8B;
+    scrollbar-track-color:#E0E0E0;
+}
+.style3 {color: #FF6600; font-weight: bold; }
+.td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #0099FF;
+}
+body {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.erro {
+	border: 1px dotted #3399FF;
+}
+.style5 {color: #808080}
+.td2 {
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #0099FF;
+}
+.style6 {color: #FF6600}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FF6600;
+}
+a:hover {
+	text-decoration: none;
+	color: #0066FF;
+}
+a:active {
+	text-decoration: none;
+}
+.recados {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #F4F4F4;
+	border-top: 1px none #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px dotted #999999;
+	border-left: 1px none #999999;
+}
+.style7 {color: #000000}
+.campos {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	border: 1px solid #C9C9C9;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+.recados02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	border: 1px none #999999;
+	background-color: #F4F4F4;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3" class="td"><img src="imagens/mural_laranja.gif" width="200" height="20"></td>
+  </tr>
+  <tr>
+    <td height="38">
+<!-- BEGIN DYNAMIC BLOCK: erro -->
+<br>
+<br>
+<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" class="erro">
+  <tr>
+    <td><div align=center class="style3">Nenhum coment&aacute;rio encontrado </div></td>
+  </tr>
+</table>
+<br>
+<!-- END DYNAMIC BLOCK: erro -->
+
+<!-- BEGIN DYNAMIC BLOCK: tabela -->
+
+<br>
+<table width="100%" border="0" align="center" cellpadding="4" cellspacing="0" class="recados">
+  <tr valign="top">
+    <td width="100%" height="36"><span class="style3">Nome: </span>{Nome}<br>
+    <span class="style3">Email: </span><a href="mailto:%7BEmail%7D">{Email}</a></td>
+  </tr>
+  <tr>
+    <td><div align="justify">{Mensagem}</div></td></tr>
+</table>
+<br>
+<!-- END DYNAMIC BLOCK: tabela -->
+	</td>
+  </tr>
+  <tr>
+    <td valign="top">
+<form action="comentario.php" method="post" name="mural" id="mural">
+<input type="hidden" name="acao" value="cadastrar">
+<input name="id_post" type="hidden" id="id_post" value="{IDPost}">
+	<table width="100%"  border="0" cellpadding="3" cellspacing="2" class="recados02">
+      <tr>
+        <td width="20%"><div align="right">Nome:</div></td>
+        <td width="80%"><input name="nome" type="text" class="campos" id="nome" size="40"></td>
+      </tr>
+      <tr>
+        <td><div align="right">Email:</div></td>
+        <td><input name="email" type="text" class="campos" id="email" size="40"></td>
+      </tr>
+      <tr>
+        <td valign="top"><div align="right">Coment&aacute;rio:</div></td>
+        <td><textarea name="comentario" cols="40" rows="4" class="campos" id="comentario" onFocus="ContaCaracteres();" onChange="ContaCaracteres();" onKeyDown="ContaCaracteres();" onKeyup="ContaCaracteres();"></textarea>
+          <br>
+          {IdiomaCaracteres}
+          <input name="caracteres" type="text" disabled class="campos" value="400" size="3" maxlength="3">
+{IdiomaCaracteres2}.</td>
+      </tr>
+      <tr>
+        <td height="26">&nbsp;</td>
+        <td><input name="Submit" type="submit" class="botao" value="Enviar"></td>
+      </tr>
+    </table>
+</form>	
+	</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><div align="center">[<a href="javascript:window.close();">Fechar Janela</a>]</div></td>
+  </tr>
+</table>
+<br>
+</body>
+</html>

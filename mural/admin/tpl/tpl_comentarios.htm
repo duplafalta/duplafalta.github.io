@@ -1,0 +1,150 @@
+<html>
+<head>
+<!-- ---------------------------------------------------------------- -->
+<!--                      Inter4u - Eldon Pinheiro                    -->
+<!-- ---------------------------------------------------------------- -->
+<title>{Titulo}</title>
+<script src="mural.js"></script>
+<style type="text/css">
+<!--
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+    scrollbar-face-color:#C0C0C0;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-3dlight-color:#C0C0C0;
+    scrollbar-darkshadow-color:#000000;
+    scrollbar-shadow-color:#808080;
+    scrollbar-arrow-color:#8B8B8B;
+    scrollbar-track-color:#E0E0E0;
+	background-image: url(../imagens/bg_visualizar.jpg);
+}
+.td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #0099FF;
+}
+body {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.erro {
+	border: 1px dotted #3399FF;
+}
+.td2 {
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #0099FF;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FF6600;
+}
+a:hover {
+	text-decoration: none;
+	color: #0066FF;
+}
+a:active {
+	text-decoration: none;
+}
+.recados {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #F4F4F4;
+	border-top: 1px none #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px dotted #999999;
+	border-left: 1px none #999999;
+}
+.campos {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	border: 1px solid #C9C9C9;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+.recados02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	border: 1px none #999999;
+	background-color: #F4F4F4;
+}
+.tabela3 {	font-family: Verdana, Arial;
+	font-size: 10px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	border-top: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	border-left: 1px solid #666666;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body>
+<table width="100%" bgcolor="#FFFFFF" border="0" align="center" cellpadding="4" cellspacing="1" class="tabela3">
+  <tr>
+    <td height="22" background="tpl/img/bg_menu.gif" bgcolor="#A3CEFA">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#CFEBFC"><strong>{Titulo}</strong></td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN DYNAMIC BLOCK: erro -->
+<table width="100%" bgcolor="#FFFFFF" border="0" align="center" cellpadding="4" cellspacing="1" class="tabela3">
+  <tr>
+    <td height="22" background="tpl/img/bg_menu.gif" bgcolor="#A3CEFA">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#CFEBFC"><strong>{Erro}</strong></td>
+  </tr>
+</table>
+<!-- END DYNAMIC BLOCK: erro -->
+<br>
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#FFFFFF" class="tabela3">
+<tr bgcolor="#A3CEFA"> 
+      <td height="22" colspan="3" background="tpl/img/bg_menu.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+
+
+<!-- BEGIN DYNAMIC BLOCK: tabela -->
+<table width="100%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#FFFFFF" class="tabela3">
+  <tr valign="top" bgcolor="#A3CEFA">
+    <td width="374" height="18">Nome: {Nome}</td>
+    <td width="569">Email: <a href="mailto:{Email}">{Email}</a></td>
+    <td width="26"><a href="comentarios.php?acao=excluir&id_comment={id_comment}&id_post={id_post}"><img src="../imagens/excluir.gif" alt="Excluir" width="17" height="17" border="0"></a></td>
+  </tr>
+  <tr bgcolor="#CFEBFC">
+    <td colspan="3"><div align="justify">{Mensagem}</div></td></tr>
+</table><br>
+<!-- END DYNAMIC BLOCK: tabela -->
+</td>
+  </tr>
+  <tr>
+    <td bgcolor="#5AA8F5"><div align="center">
+      <input name="Button" type="button" class="botao" value="Voltar" onClick="javascript:history.back(-1);">
+    </div></td>
+  </tr>
+</table>
+<br>
+</body>
+</html>
