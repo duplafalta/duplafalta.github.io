@@ -1,0 +1,10 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|14 Jan 2019 10:57:41 -0000
+vti_extenderversion:SR|6.0.2.8161
+vti_author:SR|JUNIOR\\junior
+vti_modifiedby:SR|INTRANET\\junior
+vti_nexttolasttimemodified:TR|14 Jan 2019 10:57:28 -0000
+vti_timecreated:TR|19 Sep 2016 16:40:11 -0000
+vti_backlinkinfo:VX|dupla-falta-2015/torneios/2022/interno-maio/index.html chaveamento-duplas-masculino-b.html chaveamento-masculino-2.html dupla-falta-2015/granexopen/2022/programacao-simples.html dupla-falta-2015/granexopen/2022/chaveamento-dupla-mista.html chaveamento-duplas-masculino-c.html chaveamento-masculino-1.html chaveamento-masculino-3.html regulamento.html dupla-falta-2015/torneios/2019/interno-fevereiro/index.html chaveamento-duplas-masculino-a.html dupla-falta-2015/granexopen/2022/programacao-duplas.html programacao-duplas.html dupla-falta-2015/granexopen/2022/index.html dupla-falta-2015/granexopen/2022/regulamento.html dupla-falta-2015/granexopen/2022/chaveamento-feminino-1.html dupla-falta-2015/granexopen/2022/chaveamento-feminino-2.html chaveamento-dupla-mista.html chaveamento-veteranos.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-4.html dupla-falta-2015/granexopen/2022/chaveamento-feminino-iniciante.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-5.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-1.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-2.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-3.html dupla-falta-2015/granexopen/2022/estatisticas.html dupla-falta-2015/granexopen/2022/chaveamento-duplas-masculino-c.html dupla-falta-2015/granexopen/2022/chaveamento-masculino-iniciante.html estatisticas.html chaveamento-duplas-feminino.html dupla-falta-2015/granexopen/2022/chaveamento-duplas-masculino-a.html dupla-falta-2015/granexopen/2022/chaveamento-duplas-masculino-b.html dupla-falta-2015/granexopen/2022/chaveamento-infantil.html programacao-simples.html chaveamento-feminino-2.html index.html chaveamento-masculino-4.html chaveamento-masculino-5.html chaveamento-masculino-6.html
+vti_cacheddtm:TX|14 Jan 2019 10:57:04 -0000
+vti_filesize:IR|91668
