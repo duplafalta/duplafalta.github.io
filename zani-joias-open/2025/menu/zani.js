@@ -1,6 +1,6 @@
 ﻿
 /*!
- * JavaScript code for dropdown menu (created: March 25, 2025 18:33:54, Hash: 291D, UID_CRC: EFFF66CE)
+ * JavaScript code for dropdown menu (created: March 25, 2025 18:38:39, Hash: 291D, UID_CRC: EFFF66CE)
  * Copyright (c) 2003-2025 Dropdown Menu Generator. All rights reserved.
  * https://www.dropdownmenugenerator.com
  */
@@ -46,7 +46,7 @@ MrgLf=parseInt(_MrgLf);if(isNaN(MrgLf)){MrgLf=0;}
 /*DSRGFT5675443*/
 
 function AddGlyphs(Path){
-cmn.RegWbFnt('MG_Icons','MG_Icons',Path+'MG_Icons','r781704085',true);
+cmn.RegWbFnt('MG_Icons','MG_Icons',Path+'MG_Icons','r313582643',true);
 };
 
 function AddCss_zani(Path,HostURL){
