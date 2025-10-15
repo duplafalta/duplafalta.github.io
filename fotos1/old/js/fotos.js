@@ -1,1 +1,0 @@
-$(document).ready( function() { $('.picasagallery').picasagallery( {username:'duplafaltasgp'} ); } );
