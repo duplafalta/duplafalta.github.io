@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<preset
+  id="16"
+  name="Low quality JPEG"
+  format="jpg"
+  antialias="true"
+  colormode="rgb"
+  overprint="false"
+  interlaced="false"
+  subformat="standard"
+  bluramount="0"
+  qualityamount="20"
+  progressive="false"
+  optimize="false">
+  <matte
+    type="rgb"
+    tint1="255"
+    tint2="255"
+    tint3="255">
+  </matte>
+</preset>

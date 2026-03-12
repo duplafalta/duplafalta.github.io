@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<preset
+  id="7"
+  name="PNG 8-bit 256 dithered"
+  format="png"
+  colormode="paletted"
+  antialias="true"
+  palette="optimized"
+  numcolors="256"
+  dithering="floyd-steinberg"
+  ditheramount="100"
+  transparency="true"
+  interlaced="false"
+  >
+  <matte
+    type="rgb"
+    tint1="255"
+    tint2="255"
+    tint3="255">
+  </matte>
+</preset>

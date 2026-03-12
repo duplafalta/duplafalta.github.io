@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<preset
+  id="17"
+  name="High quality JPEG 2000"
+  format="jp2"
+  antialias="true"
+  colormode="rgb"
+  qualityamount="80"
+  progression="quality"
+  mask="false"
+  codestream="false">
+  <matte
+    type="rgb"
+    tint1="255"
+    tint2="255"
+    tint3="255">
+  </matte>
+</preset>

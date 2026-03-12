@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<preset
+  id="20"
+  name="High quality WEBP"
+  format="webp"
+  antialias="true"
+  colormode="rgb"
+  lossiness="false"
+  transparency="true"
+  qualityadvancedamount="75"
+  compressionratio="5"
+  >
+	<matte>
+		type="rgb"
+		tint1="255"
+		tint2="255"
+		tint3="255">
+	</matte>
+</preset>

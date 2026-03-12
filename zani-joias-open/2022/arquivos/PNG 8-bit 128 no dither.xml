@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<preset
+  id="10"
+  name="PNG 8-bit 128 no dither"
+  format="png"
+  colormode="paletted"
+  antialias="true"
+  palette="optimized"
+  numcolors="128"
+  dithering="none"
+  transparency="true"
+  interlaced="false"
+  >
+  <matte
+    type="rgb"
+    tint1="255"
+    tint2="255"
+    tint3="255">
+  </matte>
+</preset>
