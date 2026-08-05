@@ -1,201 +1,315 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Dupla Falta">
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="">
-  <meta property="og:image" content="">
-  <meta name="twitter:title" content="Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
+  <title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
   <meta name="description" content="Associação de Tenistas em São Gabriel da Palha - ES">
-  
-<title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
 
-<script type="text/javascript" src="https://duplafalta.com.br/menu/principal/principal.js"></script>
+  <!-- Open Graph / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES">
+  <meta property="og:image" content="">
 
-<script type="text/javascript" src="https://duplafalta.com.br/zani-joias-open/2023/menu/zani.js"></script>
+  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-<script type="text/javascript" src="https://duplafalta.com.br/zani-joias-open/menu-topo/zanitopo.js"></script>
+  <!-- Script do Menu Principal (Mantido) -->
+  <script src="https://duplafalta.com.br/menu/principal/principal.js"></script>
 
-<link href='https://fonts.googleapis.com/css?family=Roboto ' rel='stylesheet' type='text/css'>
+  <style>
+    :root {
+      --bg-dark: #333333;
+      --bg-light: #EFEFEF;
+      --bg-red: #AF0204;
+      --bg-red-dark: #7D0103;
+      --primary-blue: #149DCC;
+      --text-dark: #434343;
+      --border-color: #dcdcdc;
+    }
 
-<style type="text/css">
-<!--
-body {
-	font-family: Roboto, Arial, Sans-serif;
-}
--->
-</style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-}
-</style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    /* Topo / Header principal */
+    .site-header {
+      background-color: var(--bg-dark);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      gap: 15px;
+      color: #ffffff;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-main img {
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .header-title {
+      font-weight: 700;
+      font-size: 1rem;
+      max-width: 300px;
+      color: #ffffff;
+    }
+
+    .principal-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 200px;
+    }
+
+    .btn-associe {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 4px;
+      transition: opacity 0.2s ease-in-out;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-associe:hover {
+      opacity: 0.9;
+    }
+
+    /* --- Menus Incorporados --- */
+    .integrated-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 12px 20px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-link:hover {
+      background-color: var(--bg-light);
+      color: var(--bg-red);
+    }
+
+    /* Banner do Torneio (Fundo Vermelho Padrão) */
+    .banner-section {
+      background-color: var(--bg-red);
+      padding: 30px 10px 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-section img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+    }
+
+    /* Seção de Regulamentos por Ano (Parte de Baixo Escura) */
+    .rules-section {
+      background-color: var(--bg-red-dark);
+      padding: 40px 15px 60px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .rules-title {
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Grid Responsiva dos Anos */
+    .years-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .year-card {
+      background-color: #ffffff;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .year-card:hover {
+      transform: translateY(-4px);
+      background-color: var(--bg-light);
+      color: var(--bg-red);
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background-color: var(--bg-light);
+      border-top: 1px solid #999999;
+      color: var(--text-dark);
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    .site-footer p {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .site-footer span {
+      font-size: 0.8rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .site-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand-group {
+        flex-direction: column;
+      }
+
+      .header-title {
+        max-width: 100%;
+      }
+
+      .btn-associe {
+        width: 100%;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+      }
+
+      .years-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .years-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body bgcolor="#EFEFEF">
+<body>
 
-<div align="center">
-	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" height="110" bgcolor="#333333">
-		<tr>
-			<td align="center" width="20%" valign="middle">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="https://duplafalta.com.br/index.html" target="_top">
-				<img border="0" src="https://duplafalta.com.br/images/topo/logo-95x95.png" width="95" height="95"></a></p>
-			</td>
-			
-			<td align="center" width="25%" valign="middle">
-				<p style="margin-top: 0; margin-bottom: 0" align="left">
-				<font color="#FFFFFF"><b>Associação de Tenistas em São Gabriel da Palha - ES</b></font></p>
-			</td>
-				
-			<td align="center" width="40%" style="border:medium none #FFFFFF; padding:2px; " valign="middle">
-				<div id="principal">
-					<p style="margin-top: 0; margin-bottom: 0"></div>
-			</td>
+  <!-- Cabeçalho Principal (Mantido via principal.js) -->
+  <header class="site-header">
+    <div class="brand-group">
+      <a href="https://duplafalta.com.br/index.html" class="logo-main" target="_top">
+        <img src="https://duplafalta.com.br/images/topo/logo-95x95.png" alt="Logo Dupla Falta" width="95" height="95">
+      </a>
+      <p class="header-title">Associação de Tenistas em São Gabriel da Palha - ES</p>
+    </div>
 
-			<td width="15%" align="center" height="99%" bgcolor="#149DCC">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="https://duplafalta.com.br/associacao/index.html" style="text-decoration: none; font-weight:700">
-				<font color="#FFFFFF">Associe-se</font></a></p>
-			</td>
-		</tr>
-	</table>
-</div>
+    <div class="principal-container">
+      <div id="principal"></div>
+    </div>
 
-<div align="center">
-	<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="50" bgcolor="#EFEFEF">
-		<tr>
-			<td style="border-style: none; border-width: medium" align="center">
-				<div id="zanitopo">
-			</td>
-		</tr>
-	</table>
-</div>
-	
-<hr>
-	
-<div class="img" align="center">
-	<p align="center" style="margin-top: 0; margin-bottom: 0">
-	<a href="https://duplafalta.com.br/zani-joias-open/2022/index.html" target="_top">
-	<img border="0" src="https://duplafalta.com.br/zani-joias-open/images/2022-1.png" width="600" height="200"></a></p>
-</div>
-	
-<div align="center">
-	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" height="60" bgcolor="#CCCCCC">
-		<tr>
-			<td style="border-style:none; border-width:medium; padding-left: 2px; padding-right: 2px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<font face="Arial" style="font-size: 14pt" color="#333333">Escolha o ano para ver as Fotos do Torneio</font></p>
-			</td>
-		</tr>
-	</table>
-</div>
-	
-<br>
-	
-<div align="center">
-	<table width="100%" height="250" border="0" cellpadding="0" style="border-collapse: collapse">
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-top:medium none #999999; border-bottom:1px solid #999999; " height="25%" align="center">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a style="text-decoration: none" target="_blank" href="https://photos.app.goo.gl/RvNjdx3f9hPBRZBU8">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2014</font></a></p>
-			</td>
-	
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-top:medium none #999999; border-bottom:1px solid #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a style="text-decoration: none" target="_top" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2015</font></a></p>
-			</td>
-			
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-top:medium none #999999; border-bottom:1px solid #999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a style="text-decoration: none" target="_top" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2016</font></a></p>
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%" align="center">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2017</font></a></p>
-			</td>
-		
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0" align="center">
-				<a target="_top" style="text-decoration: none" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2018</font></a></p>
-			</td>
+    <a href="https://duplafalta.com.br/associacao/index.html" class="btn-associe">Associe-se</a>
+  </header>
 
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-top:1px solid #999999; border-bottom:medium none #999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2019</font></a></p>
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%" align="center">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://photos.app.goo.gl/z34gbDMtpKpF12Yw7">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2022</font></a></p>
-			</td>
-		
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_blank" style="text-decoration: none" href="https://photos.app.goo.gl/haCtaT8M3aLMA5jK6">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2023</font></a></p>
-			</td>
+  <!-- Segundo Menu (Incorporado) -->
+  <nav class="integrated-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/index.html" class="nav-link">Página Principal</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/resultados" class="nav-link">Resultados</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/fotos" class="nav-link">Fotos</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/inscricao.html" target="_top" class="nav-link">Inscrição</a></li>
+    </ul>
+  </nav>
 
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-top:1px solid #999999; border-bottom:medium none #999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_blank" style="text-decoration: none" href="https://photos.app.goo.gl/vhYDdint4KDGtmru6">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2024</font></a></p>
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%" align="center">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://photos.app.goo.gl/VVEaJWAwTQdUnKaf6">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2025</font></a></p>
-			</td>
-		
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-top:1px solid #999999; border-bottom:medium none #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_blank" style="text-decoration: none" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333"></font></a></p>
-			</td>
+  <!-- Banner do Torneio -->
+  <section class="banner-section">
+    <a href="index.html" target="_top">
+      <img src="https://duplafalta.com.br/zani-imoveis-open/images/logo-principal.png" alt="Zani Jóias Open" width="600" height="200">
+    </a>
+  </section>
 
-			<td width="33%" align="center" valign="middle" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-top:1px solid #999999; border-bottom:medium none #999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_blank" style="text-decoration: none" href="">
-				<font face="Arial" style="font-size: 14pt" color="#333333"></font></a></p>
-			</td>
-	</table>
-</div>
-	
-<br>
-	
-<div align="center">
-	<table border="0" width="100%" cellspacing="0" cellpadding="0" height="40" bordercolor="#999999" style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px">
-		<tr>
-			<td style="border-left: medium none #999999; border-right: medium none #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<font face="Roboto" color="#434343" size="3"><b>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</b></font><br>
-				<font face="Roboto" color="#434343" size="2">Todos os direitos reservados - Fundada em 04/07/2013</font></p>
-			</td>
-		</tr>
-	</table>
-</div>
+  <!-- Área de Seleção dos Anos do Regulamento (Fundo Escuro) -->
+  <main class="rules-section">
+    <h1 class="rules-title">Escolha o ano para ver as Fotos do Torneio</h1>
+
+    <div class="years-grid">
+      <a href="2026/regulamento.html" target="_top" class="year-card">2026</a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <p><strong>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</strong></p>
+    <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
+  </footer>
 
 </body>
 </html>
