@@ -15,21 +15,20 @@
   <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Scripts do sistema original -->
+  <!-- SCRIPT ORIGINAL DO MENU PRINCIPAL DO SITE (MANTIDO) -->
   <script src="https://duplafalta.com.br/menu/principal/principal.js"></script>
-  <script src="https://duplafalta.com.br/zani-imoveis-open/2026/menu/zani.js"></script>
-  <script src="https://duplafalta.com.br/zani-imoveis-open/menu-topo/zanitopo.js"></script>
 
   <style>
     :root {
       --bg-dark: #333333;
       --bg-light: #EFEFEF;
       --bg-red: #AF0204;
+      --bg-red-hover: #8C0203;
       --primary-blue: #149DCC;
       --text-dark: #434343;
-      --border-color: #e0e0e0;
+      --border-color: #dcdcdc;
     }
 
     * {
@@ -41,20 +40,20 @@
     body {
       font-family: 'Roboto', Arial, sans-serif;
       background-color: var(--bg-light);
-      color: #ffffff;
+      color: #333333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Topo / Header principal */
+    /* --- Header Principal --- */
     .site-header {
       background-color: var(--bg-dark);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 20px;
+      padding: 12px 20px;
       gap: 15px;
     }
 
@@ -74,16 +73,19 @@
     .header-title {
       font-weight: 700;
       font-size: 1rem;
-      max-width: 300px;
+      max-width: 280px;
       color: #ffffff;
+      line-height: 1.3;
     }
 
+    /* Container do Menu Principal JS */
     .principal-container {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       min-width: 200px;
+      color: #ffffff;
     }
 
     .btn-associe {
@@ -91,33 +93,122 @@
       color: #ffffff;
       text-decoration: none;
       font-weight: 700;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 4px;
       transition: opacity 0.2s ease-in-out;
       text-align: center;
+      white-space: nowrap;
     }
 
     .btn-associe:hover {
       opacity: 0.9;
     }
 
-    /* Menus dinâmicos superiores e secundários */
-    .nav-container {
-      background-color: var(--bg-light);
-      padding: 10px;
-      display: flex;
-      justify-content: center;
+    /* --- Estilização Geral dos Menus --- */
+    .integrated-nav {
+      background-color: #ffffff;
       border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    /* Banners e Imagens Principais */
-    .banner-section {
-      background-color: var(--bg-red);
-      padding: 20px 10px;
+    .nav-list {
+      list-style: none;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 12px 20px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      background-color: var(--bg-light);
+      color: var(--bg-red);
+    }
+
+    /* --- Terceiro Menu (Menu do Torneio - Barra Vermelha) --- */
+    .event-nav {
+      background-color: var(--bg-red-hover);
+    }
+
+    .event-nav .nav-link {
+      color: #ffffff;
+      padding: 12px 18px;
+    }
+
+    .event-nav .nav-link:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
+    }
+
+    /* --- Estilização das Sub-abas (Dropdown) --- */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      list-style: none;
+      z-index: 100;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .event-nav .dropdown-menu {
+      background-color: var(--bg-red-hover);
+      border-top: 2px solid var(--primary-blue);
+    }
+
+    .dropdown-menu li a {
+      padding: 10px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      display: block;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .event-nav .dropdown-menu li a {
+      color: #ffffff;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: var(--bg-light);
+      color: var(--bg-red);
+    }
+
+    .event-nav .dropdown-menu li a:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
+    }
+
+    /* Ativa o Dropdown ao passar o mouse */
+    .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* --- Banner --- */
+    .banner-section {
+      background-color: var(--bg-red);
+      padding: 25px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .banner-section img,
@@ -125,22 +216,27 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
     }
 
-    /* Área do torneio / Campeões */
+    /* --- Seção do Conteúdo --- */
     .champions-section {
       background-color: var(--bg-red);
-      padding: 40px 10px;
+      padding: 40px 15px;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex: 1;
     }
 
-    /* Rodapé */
+    .champions-section img {
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --- Rodapé --- */
     .site-footer {
       background-color: var(--bg-light);
-      border-top: 1px solid #999999;
+      border-top: 1px solid var(--border-color);
       color: var(--text-dark);
       text-align: center;
       padding: 20px;
@@ -156,7 +252,7 @@
       font-size: 0.8rem;
     }
 
-    /* Responsividade para telas menores */
+    /* --- Responsividade --- */
     @media (max-width: 768px) {
       .site-header {
         flex-direction: column;
@@ -174,51 +270,105 @@
       .btn-associe {
         width: 100%;
       }
+
+      .nav-list {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Cabeçalho Principal -->
+  <!-- 1. Cabeçalho Principal (MENU PRINCIPAL PRESERVADO VIA principal.js) -->
   <header class="site-header">
     <div class="brand-group">
       <a href="https://duplafalta.com.br/index.html" class="logo-main" target="_top">
         <img src="https://duplafalta.com.br/images/topo/logo-95x95.png" alt="Logo Dupla Falta" width="95" height="95">
       </a>
-      <p class="header-title">Associação de Tenistas em São Gabriel da Palha - ES</p>
+      <h1 class="header-title">Associação de Tenistas em São Gabriel da Palha - ES</h1>
     </div>
 
+    <!-- Div id="principal" mantida para execução do JS original -->
     <div class="principal-container">
-      <!-- Injeção via principal.js -->
       <div id="principal"></div>
     </div>
 
     <a href="https://duplafalta.com.br/associacao/index.html" class="btn-associe">Associe-se</a>
   </header>
 
-  <!-- Container Zani Topo -->
-  <nav class="nav-container">
-    <div id="zanitopo"></div>
+  <!-- 2. Segundo Menu (zanitopo incorporado) -->
+  <nav class="integrated-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open" class="nav-link">Página Principal</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/resultados" class="nav-link">Resultados</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/fotos" class="nav-link">Fotos</a></li>
+      <li class="nav-item"><a href="https://form.jotform.com/262043717012648" target="_blank" class="nav-link">Inscrição</a></li>
+    </ul>
   </nav>
 
-  <!-- Banner do Torneio 2026 -->
+  <!-- Banner do Torneio -->
   <section class="banner-section">
     <a href="index.html" target="_top">
       <img src="images/logo-2026.png" alt="Logo Zani Imóveis Open 2026" width="400" height="100">
     </a>
   </section>
 
-  <!-- Container Zani Sub-menu -->
-  <nav class="nav-container">
-    <div id="zani"></div>
+  <!-- 3. Terceiro Menu (Menu com Sub-abas para Categorias e Informações) -->
+  <nav class="integrated-nav event-nav">
+    <ul class="nav-list">
+      <!-- Sub-aba Simples Feminino -->
+      <li class="nav-item">
+        <a class="nav-link">Simples Feminino &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="chaveamento-feminino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-feminino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-feminino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-feminino-4">4ª Classe</a></li>
+        </ul>
+      </li>
+
+      <!-- Sub-aba Simples Masculino -->
+      <li class="nav-item">
+        <a class="nav-link">Simples Masculino &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="chaveamento-masculino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-masculino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-masculino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-msculino-4">4ª Classe</a></li>
+          <li><a href="chaveamento-msculino-5">5ª Classe</a></li>
+          <li><a href="chaveamento-msculino-6">6ª Classe</a></li>
+          <li><a href="chaveamento-msculino-7">7ª Classe</a></li>
+          <li><a href="chaveamento-masculino-iniciantes">Iniciantes</a></li>
+        </ul>
+      </li>
+
+      <!-- Links Diretos -->
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/programacao-simples.html" class="nav-link">Programação</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/estatisticas" class="nav-link">Estatísticas</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/inscritos" class="nav-link">Tenistas Inscritos</a></li>
+    </ul>
   </nav>
 
-  <!-- Área de Campeões/Programação -->
+  <!-- Conteúdo Principal -->
   <main class="champions-section">
     <div id="campeoes">
       <a href="programacao-simples.html" target="_top">
-        <img src="images/programacao-e-resultados.png" title="Zani Imoveis Open 2026" alt="Programação e Resultados" width="450" height="270">
+        <img src="images/programacao-e-resultados.png" title="Zani Imóveis Open 2026" alt="Programação e Resultados" width="450" height="270">
       </a>
     </div>
   </main>
