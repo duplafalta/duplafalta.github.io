@@ -26,6 +26,7 @@
       --bg-dark: #333333;
       --bg-light: #EFEFEF;
       --bg-red: #AF0204;
+      --bg-red-hover: #8C0203;
       --bg-red-dark: #7D0103;
       --primary-blue: #149DCC;
       --text-dark: #434343;
@@ -137,7 +138,22 @@
       color: var(--bg-red);
     }
 
-    /* Banner do Torneio (Vermelho padrão) */
+    /* Terceiro Menu (Menu do Torneio - Barra Vermelha) */
+    .event-nav {
+      background-color: var(--bg-red-hover);
+    }
+
+    .event-nav .nav-link {
+      color: #ffffff;
+      padding: 10px 18px;
+    }
+
+    .event-nav .nav-link:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
+    }
+
+    /* Banner do Torneio */
     .banner-section {
       background-color: var(--bg-red);
       padding: 30px 10px 20px 10px;
@@ -239,7 +255,7 @@
 
 <body>
 
-  <!-- Cabeçalho Principal (Mantido via principal.js) -->
+  <!-- 1. Cabeçalho Principal (Mantido via principal.js) -->
   <header class="site-header">
     <div class="brand-group">
       <a href="https://duplafalta.com.br/index.html" class="logo-main" target="_top">
@@ -255,7 +271,7 @@
     <a href="https://duplafalta.com.br/associacao/index.html" class="btn-associe">Associe-se</a>
   </header>
 
-  <!-- Segundo Menu (zanitopo incorporado) -->
+  <!-- 2. Segundo Menu (Substitui 'zanitopo') -->
   <nav class="integrated-nav">
     <ul class="nav-list">
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/index.html" class="nav-link">Página Principal</a></li>
@@ -266,12 +282,22 @@
     </ul>
   </nav>
 
-  <!-- Banner do Torneio (Atualizado para logo-2026.png) -->
+  <!-- Banner do Torneio -->
   <section class="banner-section">
     <a href="index.html" target="_top">
       <img src="images/logo-2026.png" alt="Logo Zani Jóias Open 2026" width="400" height="100">
     </a>
   </section>
+
+  <!-- 3. Terceiro Menu (Substitui 'zani') -->
+  <nav class="integrated-nav event-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html" class="nav-link">O Torneio</a></li>
+      <li class="nav-item"><a href="programacao-simples.html" class="nav-link">Programação e Chaves</a></li>
+      <li class="nav-item"><a href="regulamento.html" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="galeria.html" class="nav-link">Fotos do Evento</a></li>
+    </ul>
+  </nav>
 
   <!-- Área da Planilha / Estatísticas no tamanho proporcional sem scroll -->
   <main class="champions-section">
