@@ -4,16 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dupla Falta - CINCATE - São Gabriel da Palha - ES</title>
-
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="https://duplafalta.com.br/images/duplafalta.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
+  <title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
+  <meta name="description" content="Associação de Tenistas em São Gabriel da Palha - ES">
 
   <!-- Open Graph / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dupla Falta - CINCATE - São Gabriel da Palha - ES">
+  <meta name="twitter:title" content="Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES">
+  <meta property="og:image" content="">
 
+  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -26,9 +25,11 @@
       --bg-dark: #333333;
       --bg-light: #EFEFEF;
       --bg-red: #AF0204;
-      --bg-red-hover: #8C0203; /* Vermelho escuro do menu da imagem */
       --bg-red-dark: #7D0103;
       --primary-blue: #149DCC;
+      --accent-orange: #FFA500;
+      --accent-orange-hover: #e69500;
+      --whatsapp-green: #007C6E;
       --text-dark: #434343;
       --border-color: #dcdcdc;
     }
@@ -104,7 +105,7 @@
       opacity: 0.9;
     }
 
-    /* --- Base dos Menus Incorporados --- */
+    /* --- Menus Incorporados --- */
     .integrated-nav {
       background-color: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -131,6 +132,7 @@
       font-weight: 500;
       font-size: 0.95rem;
       transition: background 0.2s, color 0.2s;
+      cursor: pointer;
     }
 
     .nav-link:hover {
@@ -138,7 +140,22 @@
       color: var(--bg-red);
     }
 
-    /* --- Submenus (Dropdowns CSS) --- */
+    /* Terceiro Menu (Barra Vermelha do Evento) */
+    .event-nav {
+      background-color: var(--bg-red-dark);
+    }
+
+    .event-nav .nav-link {
+      color: #ffffff;
+      padding: 12px 18px;
+    }
+
+    .event-nav .nav-link:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
+    }
+
+    /* Sub-abas (Dropdowns) */
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -152,52 +169,43 @@
       border-radius: 0 0 4px 4px;
     }
 
-    .dropdown-menu a {
-      padding: 10px 15px;
+    .event-nav .dropdown-menu {
+      background-color: var(--bg-red-dark);
+      border-top: 2px solid var(--primary-blue);
+    }
+
+    .dropdown-menu li a {
+      padding: 10px 16px;
       color: var(--text-dark);
       text-decoration: none;
       display: block;
       font-size: 0.9rem;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .event-nav .dropdown-menu li a {
+      color: #ffffff;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: var(--bg-light);
+      color: var(--bg-red);
+    }
+
+    .event-nav .dropdown-menu li a:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
     }
 
     .nav-item:hover .dropdown-menu {
       display: block;
     }
 
-    /* --- Terceiro Menu (Menu do Evento - Vermelho) --- */
-    .event-nav {
-      background-color: var(--bg-red-hover);
-    }
-
-    .event-nav .nav-link {
-      color: #ffffff;
-      padding: 12px 18px;
-    }
-
-    .event-nav .nav-link:hover {
-      background-color: var(--bg-red);
-      color: #ffffff;
-    }
-
-    /* Customização do Dropdown para o Menu Vermelho */
-    .event-nav .dropdown-menu {
-      background-color: var(--bg-red-hover);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .event-nav .dropdown-menu a {
-      color: #ffffff;
-    }
-
-    .event-nav .dropdown-menu a:hover {
-      background-color: var(--bg-red);
-      color: #ffffff;
-    }
-
-    /* Banner do Torneio */
+    /* Banner do Torneio (Com fundo #AF0204) */
     .banner-section {
       background-color: var(--bg-red);
-      padding: 30px 10px 20px 10px;
+      padding: 20px 10px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -207,36 +215,152 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
     }
 
-    /* --- ÁREA PROPORCIONAL SEM BARRAS DE ROLAGEM --- */
-    .champions-section {
-      background-color: var(--bg-red-dark);
-      padding: 30px 10px 50px 10px;
+    /* --- Bloco Principal de Inscrição --- */
+    .info-container {
+      max-width: 900px;
+      margin: 20px auto 30px auto;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    .btn-subscribe-cta {
+      display: block;
+      background-color: var(--accent-orange);
+      color: #ffffff !important;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 15px 0;
+      transition: background-color 0.2s, transform 0.1s;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-subscribe-cta:hover {
+      background-color: var(--accent-orange-hover);
+      transform: translateY(-2px);
+    }
+
+    .info-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .info-card h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--bg-dark);
+    }
+
+    .info-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .price-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--bg-red);
+      margin-top: 5px;
+    }
+
+    /* Bloco PIX Copia e Cola */
+    .pix-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .pix-box {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex: 1;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
     }
 
-    .iframe-card {
-      width: 100%;
-      max-width: 450px;
-      height: 320px;
+    .pix-input {
+      background-color: #d4e8ff;
+      color: #06224a;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: none;
+      width: 210px;
+      text-align: center;
+    }
+
+    .pix-button {
+      background-color: #06224a;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .pix-button:hover {
+      background-color: #010d1f;
+    }
+
+    /* Bloco WhatsApp Comprovante */
+    .whatsapp-card {
+      background-color: var(--whatsapp-green);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 25px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp-card a {
+      display: inline-block;
+      margin: 15px 0 10px 0;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-card a:hover {
+      transform: scale(1.1);
+    }
+
+    /* Bloco Contagem e Datas */
+    .dates-card {
       background-color: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      overflow: hidden; 
+      padding: 25px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .iframe-card iframe {
+    .iframe-wrapper {
+      max-width: 440px;
+      margin: 15px auto;
+      overflow: hidden;
+    }
+
+    .iframe-wrapper iframe {
       width: 100%;
-      height: 100%;
+      height: 80px;
       border: 0;
-      display: block;
-      overflow: hidden; 
     }
 
     /* Rodapé */
@@ -290,12 +414,7 @@
       .dropdown-menu {
         position: static;
         box-shadow: none;
-        border: none;
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-
-      .iframe-card {
-        height: 300px;
+        background-color: rgba(0, 0, 0, 0.15);
       }
     }
   </style>
@@ -303,7 +422,7 @@
 
 <body>
 
-  <!-- 1. Cabeçalho Principal (Mantido via principal.js) -->
+  <!-- 1. Cabeçalho Principal (MENU PRINCIPAL PRESERVADO VIA principal.js) -->
   <header class="site-header">
     <div class="brand-group">
       <a href="https://duplafalta.com.br/index.html" class="logo-main" target="_top">
@@ -319,7 +438,7 @@
     <a href="https://duplafalta.com.br/associacao/index.html" class="btn-associe">Associe-se</a>
   </header>
 
-  <!-- 2. Segundo Menu (Links Gerais) -->
+  <!-- 2. Segundo Menu (zanitopo incorporado) -->
   <nav class="integrated-nav">
     <ul class="nav-list">
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/index.html" class="nav-link">Página Principal</a></li>
@@ -330,44 +449,50 @@
     </ul>
   </nav>
 
-  <!-- Banner do Torneio -->
+  <!-- Banner do Torneio (Com fundo #AF0204) -->
   <section class="banner-section">
     <a href="index.html" target="_top">
-      <img src="images/logo-2026.png" alt="Logo Zani Jóias Open 2026" width="400" height="100">
+      <img src="images/logo-2026.png" alt="Logo Zani Imóveis Open 2026" width="400" height="100">
     </a>
   </section>
 
-  <!-- 3. Terceiro Menu (IDÊNTICO AO DA IMAGEM) -->
+  <!-- 3. Terceiro Menu (Categorias e Chaveamento) -->
   <nav class="integrated-nav event-nav">
     <ul class="nav-list">
-      
-      <!-- Dropdown Simples Feminino -->
+      <!-- Sub-aba Simples Feminino -->
       <li class="nav-item">
-        <a href="#" class="nav-link">Simples Feminino &#9662;</a>
+        <a class="nav-link">Simples Feminino &#9662;</a>
         <ul class="dropdown-menu">
-          <!-- Altere os links e categorias abaixo conforme necessário -->
-          <li><a href="#">Categoria A</a></li>
-          <li><a href="#">Categoria B</a></li>
+          <li><a href="chaveamento-feminino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-feminino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-feminino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-feminino-4">4ª Classe</a></li>
         </ul>
       </li>
 
-      <!-- Dropdown Simples Masculino -->
+      <!-- Sub-aba Simples Masculino -->
       <li class="nav-item">
-        <a href="#" class="nav-link">Simples Masculino &#9662;</a>
+        <a class="nav-link">Simples Masculino &#9662;</a>
         <ul class="dropdown-menu">
-          <!-- Altere os links e categorias abaixo conforme necessário -->
-          <li><a href="#">Categoria A</a></li>
-          <li><a href="#">Categoria B</a></li>
-          <li><a href="#">Categoria C</a></li>
+          <li><a href="chaveamento-masculino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-masculino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-masculino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-msculino-4">4ª Classe</a></li>
+          <li><a href="chaveamento-msculino-5">5ª Classe</a></li>
+          <li><a href="chaveamento-msculino-6">6ª Classe</a></li>
+          <li><a href="chaveamento-msculino-7">7ª Classe</a></li>
+          <li><a href="chaveamento-masculino-iniciantes">Iniciantes</a></li>
         </ul>
       </li>
 
-      <li class="nav-item"><a href="programacao-simples.html" class="nav-link">Programação</a></li>
-      <li class="nav-item"><a href="regulamento.html" class="nav-link">Regulamento</a></li>
-      <li class="nav-item"><a href="estatisticas-interno.html" class="nav-link">Estatísticas</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Tenistas Inscritos</a></li>
+      <!-- Links Diretos -->
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/programacao-simples.html" class="nav-link">Programação</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/estatisticas" class="nav-link">Estatísticas</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/inscritos" class="nav-link">Tenistas Inscritos</a></li>
     </ul>
   </nav>
+
 
   <!-- Área da Planilha / Estatísticas no tamanho proporcional sem scroll -->
   <main class="champions-section">
