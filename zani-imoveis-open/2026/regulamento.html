@@ -7,8 +7,13 @@
   <title>Dupla Falta - CINCATE - São Gabriel da Palha - ES</title>
   <meta name="description" content="Regulamento Oficial - Associação de Tenistas em São Gabriel da Palha - ES">
 
+  <!-- Open Graph / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dupla Falta - CINCATE - São Gabriel da Palha - ES">
+  <meta property="og:image" content="">
+
   <!-- Favicons -->
-  <link rel="shortcut icon" href="https://duplafalta.com.br/images/duplafalta.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
 
   <!-- Fonte Google - Roboto -->
@@ -16,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Scripts do Menu Principal -->
+  <!-- Script do Menu Principal -->
   <script src="https://duplafalta.com.br/menu/principal/principal.js"></script>
 
   <style>
@@ -26,7 +31,9 @@
       --bg-red: #AF0204;
       --bg-red-dark: #7D0103;
       --primary-blue: #149DCC;
-      --primary-blue-hover: #0f82aa;
+      --accent-orange: #FFA500;
+      --accent-orange-hover: #e69500;
+      --whatsapp-green: #007C6E;
       --text-dark: #434343;
       --border-color: #dcdcdc;
     }
@@ -199,50 +206,32 @@
       display: block;
     }
 
-    /* Banner do Torneio (Com Sombra na Logo Zani Imóveis) */
+    /* Banner */
     .banner-section {
       background-color: var(--bg-red);
-      padding: 20px 10px;
+      padding: 30px 10px 20px 10px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .banner-section a {
-      display: inline-block;
-      text-decoration: none;
-    }
+    .banner-section img { max-width: 100%; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
 
-    .logo-banner {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); /* Sombra em torno da logo */
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .logo-banner:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
-    }
-
-    /* --- ÁREA DO REGULAMENTO (GOOGLE DOCS) --- */
-    .doc-section {
+    /* --- Bloco Principal do Regulamento --- */
+    .info-container {
+      max-width: 900px;
+      margin: 20px auto 30px auto;
+      padding: 0 15px;
+      width: 100%;
       flex: 1;
-      padding: 30px 15px 50px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
     }
 
     .doc-card {
       background-color: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      max-width: 900px;
       padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      width: 100%;
       overflow: hidden;
     }
 
@@ -308,10 +297,6 @@
         background-color: rgba(0, 0, 0, 0.15);
       }
 
-      .doc-section {
-        padding: 15px 10px;
-      }
-
       .doc-card {
         padding: 10px;
       }
@@ -352,24 +337,24 @@
     </ul>
   </nav>
 
-  <!-- Banner do Torneio com Sombra na Logo -->
+  <!-- Banner do Torneio -->
   <section class="banner-section">
     <a href="index.html" target="_top">
-      <img src="images/logo-2026.png" alt="Logo Zani Imóveis Open 2026" class="logo-banner" width="400" height="100">
+      <img src="images/logo-2026.png" alt="Logo Zani Imóveis Open 2026" width="400" height="100">
     </a>
   </section>
 
-  <!-- 3. Terceiro Menu (Categorias e Chaveamento) -->
+  <!-- 3. Terceiro Menu -->
   <nav class="integrated-nav event-nav">
     <ul class="nav-list">
       <!-- Sub-aba Simples Feminino -->
       <li class="nav-item">
         <a class="nav-link">Simples Feminino &#9662;</a>
         <ul class="dropdown-menu">
-          <li><a href="chaveamento-feminino-1.html">1ª Classe</a></li>
-          <li><a href="chaveamento-feminino-2.html">2ª Classe</a></li>
-          <li><a href="chaveamento-feminino-3.html">3ª Classe</a></li>
-          <li><a href="chaveamento-feminino-4.html">4ª Classe</a></li>
+          <li><a href="chaveamento-feminino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-feminino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-feminino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-feminino-4">4ª Classe</a></li>
         </ul>
       </li>
 
@@ -377,27 +362,27 @@
       <li class="nav-item">
         <a class="nav-link">Simples Masculino &#9662;</a>
         <ul class="dropdown-menu">
-          <li><a href="chaveamento-masculino-1.html">1ª Classe</a></li>
-          <li><a href="chaveamento-masculino-2.html">2ª Classe</a></li>
-          <li><a href="chaveamento-masculino-3.html">3ª Classe</a></li>
-          <li><a href="chaveamento-masculino-4.html">4ª Classe</a></li>
-          <li><a href="chaveamento-masculino-5.html">5ª Classe</a></li>
-          <li><a href="chaveamento-masculino-6.html">6ª Classe</a></li>
-          <li><a href="chaveamento-masculino-7.html">7ª Classe</a></li>
-          <li><a href="chaveamento-masculino-iniciantes.html">Iniciantes</a></li>
+          <li><a href="chaveamento-masculino-1">1ª Classe</a></li>
+          <li><a href="chaveamento-masculino-2">2ª Classe</a></li>
+          <li><a href="chaveamento-masculino-3">3ª Classe</a></li>
+          <li><a href="chaveamento-masculino-4">4ª Classe</a></li>
+          <li><a href="chaveamento-masculino-5">5ª Classe</a></li>
+          <li><a href="chaveamento-masculino-6">6ª Classe</a></li>
+          <li><a href="chaveamento-masculino-7">7ª Classe</a></li>
+          <li><a href="chaveamento-masculino-iniciantes">Iniciantes</a></li>
         </ul>
       </li>
 
       <!-- Links Diretos -->
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html" class="nav-link">Programação</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/regulamento" class="nav-link">Regulamento</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/estatisticas" class="nav-link">Estatísticas</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/inscritos" class="nav-link">Tenistas Inscritos</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/programacao-simples.html" class="nav-link">Programação</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/estatisticas" class="nav-link">Estatísticas</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/inscritos" class="nav-link">Tenistas Inscritos</a></li>
     </ul>
   </nav>
 
   <!-- 4. Área do Documento (Regulamento) -->
-  <main class="doc-section">
+  <main class="info-container">
     <div class="doc-card">
       <iframe name="regulamento" src="https://docs.google.com/document/d/e/2PACX-1vSfiWp-Hz5W3ts35CzgIVICz3ZWJOAMr-xZ4YedEnptgyjSIYEXJgyB7ztYm1g2VCsMYOoDSFlgj4iB/pub?embedded=true" title="Regulamento do Torneio" scrolling="yes"></iframe>
     </div>
