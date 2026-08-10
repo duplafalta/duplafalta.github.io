@@ -5,22 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dupla Falta - CINCATE - São Gabriel da Palha - ES</title>
-  <meta name="description" content="Associação de Tenistas em São Gabriel da Palha - ES">
 
-  <!-- Favicons -->
   <link rel="shortcut icon" href="https://duplafalta.com.br/images/duplafalta.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
-
-  <!-- Open Graph / Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dupla Falta - CINCATE - São Gabriel da Palha - ES">
-  <meta property="og:image" content="">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Script do Menu Principal (Mantido) -->
   <script src="https://duplafalta.com.br/menu/principal/principal.js"></script>
 
   <style>
@@ -35,11 +25,7 @@
       --border-color: #dcdcdc;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Roboto', Arial, sans-serif;
@@ -62,25 +48,9 @@
       color: #ffffff;
     }
 
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo-main img {
-      width: 75px;
-      height: 75px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .header-title {
-      font-weight: 700;
-      font-size: 1rem;
-      max-width: 300px;
-      color: #ffffff;
-    }
+    .brand-group { display: flex; align-items: center; gap: 15px; }
+    .logo-main img { width: 75px; height: 75px; object-fit: contain; display: block; }
+    .header-title { font-weight: 700; font-size: 1rem; max-width: 300px; color: #ffffff; }
 
     .principal-container {
       flex: 1;
@@ -97,16 +67,12 @@
       font-weight: 700;
       padding: 12px 24px;
       border-radius: 4px;
-      transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s;
       text-align: center;
       white-space: nowrap;
     }
 
-    .btn-associe:hover {
-      opacity: 0.9;
-    }
-
-    /* --- Menus Incorporados --- */
+    /* Menus */
     .integrated-nav {
       background-color: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -121,9 +87,7 @@
       flex-wrap: wrap;
     }
 
-    .nav-item {
-      position: relative;
-    }
+    .nav-item { position: relative; }
 
     .nav-link {
       display: block;
@@ -135,12 +99,8 @@
       transition: background 0.2s, color 0.2s;
     }
 
-    .nav-link:hover {
-      background-color: var(--bg-light);
-      color: var(--bg-red);
-    }
+    .nav-link:hover { background-color: var(--bg-light); color: var(--bg-red); }
 
-    /* --- Submenus (Dropdowns CSS) --- */
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -154,48 +114,17 @@
       border-radius: 0 0 4px 4px;
     }
 
-    .dropdown-menu a {
-      padding: 10px 15px;
-      color: var(--text-dark);
-      text-decoration: none;
-      display: block;
-      font-size: 0.9rem;
-    }
+    .dropdown-menu a { padding: 10px 15px; color: var(--text-dark); text-decoration: none; display: block; font-size: 0.9rem; }
+    .nav-item:hover .dropdown-menu { display: block; }
 
-    .nav-item:hover .dropdown-menu {
-      display: block;
-    }
+    .event-nav { background-color: var(--bg-red-hover); }
+    .event-nav .nav-link { color: #ffffff; padding: 12px 18px; }
+    .event-nav .nav-link:hover { background-color: var(--bg-red); color: #ffffff; }
+    .event-nav .dropdown-menu { background-color: var(--bg-red-hover); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .event-nav .dropdown-menu a { color: #ffffff; }
+    .event-nav .dropdown-menu a:hover { background-color: var(--bg-red); color: #ffffff; }
 
-    /* --- Terceiro Menu (Menu do Evento - Vermelho) --- */
-    .event-nav {
-      background-color: var(--bg-red-hover);
-    }
-
-    .event-nav .nav-link {
-      color: #ffffff;
-      padding: 12px 18px;
-    }
-
-    .event-nav .nav-link:hover {
-      background-color: var(--bg-red);
-      color: #ffffff;
-    }
-
-    .event-nav .dropdown-menu {
-      background-color: var(--bg-red-hover);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .event-nav .dropdown-menu a {
-      color: #ffffff;
-    }
-
-    .event-nav .dropdown-menu a:hover {
-      background-color: var(--bg-red);
-      color: #ffffff;
-    }
-
-    /* Banner do Torneio */
+    /* Banner */
     .banner-section {
       background-color: var(--bg-red);
       padding: 30px 10px 20px 10px;
@@ -204,40 +133,153 @@
       align-items: center;
     }
 
-    .banner-section img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
-    }
+    .banner-section img { max-width: 100%; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
 
-    /* --- ÁREA DO CHAVEAMENTO COM TAMANHO FORÇADO E ROLAGEM PROTEGIDA --- */
-    .bracket-section {
+    /* Área do Card */
+    .content-section {
       background-color: var(--bg-red-dark);
-      padding: 40px 10px 60px 10px;
+      padding: 50px 15px 70px 15px;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       flex: 1;
     }
 
-    .bracket-card {
-      width: 100%;
-      max-width: 1000px;
+    .action-card {
       background-color: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      /* O segredo para o mobile: Permite rolar para os lados sem espremer a tabela */
-      overflow-x: auto; 
-      -webkit-overflow-scrolling: touch;
+      padding: 40px 25px;
+      text-align: center;
+      max-width: 550px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .bracket-card iframe {
-      /* Forçamos o tamanho real da tabela original para evitar achatamentos */
+    .action-card h2 {
+      font-size: 1.4rem;
+      color: var(--bg-dark);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .action-card p {
+      font-size: 0.95rem;
+      color: #666666;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .btn-trigger-modal {
+      display: inline-block;
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      border: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .btn-trigger-modal:hover {
+      background-color: #0f82aa;
+      transform: translateY(-2px);
+    }
+
+    /* --- ESTRUTURA DA MODAL COM ROLAGEM TOTAL DE CONTEÚDO --- */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 15px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-container {
+      background-color: #ffffff;
       width: 100%;
-      min-width: 965px; 
-      height: 750px; /* Altura suficiente para mostrar tudo */
+      max-width: 1000px;
+      height: 90vh; /* Ocupa 90% da altura da janela */
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      animation: modalSlide 0.3s ease-out;
+    }
+
+    @keyframes modalSlide {
+      from { transform: translateY(-15px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      background-color: var(--bg-dark);
+      color: #ffffff;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0; /* Impede o cabeçalho de encolher ao rolar */
+    }
+
+    .modal-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0 5px;
+      transition: color 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--primary-blue);
+    }
+
+    /* Permite rolagem vertical e horizontal livres para exibir todo o arquivo interno */
+    .modal-body {
+      background-color: #ffffff;
+      flex: 1;
+      width: 100%;
+      overflow: auto; /* Habilita rolagem vertical/horizontal quando necessário */
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE/Edge */
+    }
+
+    .modal-body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari e Edge */
+    }
+
+    .modal-body iframe {
+      width: 965px;
+      height: 100%;
+      min-height: 5200px; /* Garante que toda a extensão vertical do arquivo seja renderizada */
+      max-width: 100%;
       border: 0;
       display: block;
     }
@@ -252,43 +294,20 @@
       margin-top: auto;
     }
 
-    .site-footer p {
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-    }
+    .site-footer p { font-size: 0.9rem; margin-bottom: 5px; }
+    .site-footer span { font-size: 0.8rem; }
 
-    .site-footer span {
-      font-size: 0.8rem;
-    }
-
-    /* Responsividade */
     @media (max-width: 768px) {
-      .site-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .brand-group {
-        flex-direction: column;
-      }
-      .header-title {
-        max-width: 100%;
-      }
-      .btn-associe {
-        width: 100%;
-      }
-      .nav-list {
-        flex-direction: column;
-        width: 100%;
-      }
-      .nav-item {
-        width: 100%;
-        text-align: center;
-      }
-      .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        border: none;
-        background-color: rgba(0, 0, 0, 0.1);
+      .site-header { flex-direction: column; text-align: center; }
+      .brand-group { flex-direction: column; }
+      .header-title { max-width: 100%; }
+      .btn-associe { width: 100%; }
+      .nav-list { flex-direction: column; width: 100%; }
+      .nav-item { width: 100%; text-align: center; }
+      .dropdown-menu { position: static; box-shadow: none; border: none; background-color: rgba(0, 0, 0, 0.1); }
+      
+      .modal-container {
+        height: 95vh;
       }
     }
   </style>
@@ -326,7 +345,6 @@
   <!-- Banner do Torneio -->
   <section class="banner-section">
     <a href="index.html" target="_top">
-      <!-- Imagem atualizada para 2026 conforme solicitado -->
       <img src="images/logo-2026.png" alt="Logo Zani Jóias Open 2026" width="400" height="100">
     </a>
   </section>
@@ -334,52 +352,92 @@
   <!-- 3. Terceiro Menu -->
   <nav class="integrated-nav event-nav">
     <ul class="nav-list">
-      
-      <!-- Dropdown Simples Feminino -->
       <li class="nav-item">
         <a href="#" class="nav-link">Simples Feminino &#9662;</a>
         <ul class="dropdown-menu">
-          <li><a href="chaveamento-feminino-1">1ª Classe</a></li>
-          <li><a href="chaveamento-feminino-2">2ª Classe</a></li>
-          <li><a href="chaveamento-feminino-3">3ª Classe</a></li>
-          <li><a href="chaveamento-feminino-4">4ª Classe</a></li>
+          <li><a href="chaveamento-feminino-1.html">1ª Classe</a></li>
+          <li><a href="chaveamento-feminino-2.html">2ª Classe</a></li>
+          <li><a href="chaveamento-feminino-3.html">3ª Classe</a></li>
+          <li><a href="chaveamento-feminino-4.html">4ª Classe</a></li>
         </ul>
       </li>
 
-      <!-- Dropdown Simples Masculino -->
       <li class="nav-item">
         <a href="#" class="nav-link">Simples Masculino &#9662;</a>
         <ul class="dropdown-menu">
-          <li><a href="chaveamento-masculino-1">1ª Classe</a></li>
-          <li><a href="chaveamento-masculino-2">2ª Classe</a></li>
-          <li><a href="chaveamento-masculino-3">3ª Classe</a></li>
-          <li><a href="chaveamento-msculino-4">4ª Classe</a></li>
-          <li><a href="chaveamento-msculino-5">5ª Classe</a></li>
-          <li><a href="chaveamento-msculino-6">6ª Classe</a></li>
-          <li><a href="chaveamento-msculino-7">7ª Classe</a></li>
-          <li><a href="chaveamento-masculino-iniciantes">Iniciantes</a></li>
+          <li><a href="chaveamento-masculino-1.html">1ª Classe</a></li>
+          <li><a href="chaveamento-masculino-2.html">2ª Classe</a></li>
+          <li><a href="chaveamento-masculino-3.html">3ª Classe</a></li>
+          <li><a href="chaveamento-masculino-4.html">4ª Classe</a></li>
+          <li><a href="chaveamento-masculino-5.html">5ª Classe</a></li>
+          <li><a href="chaveamento-masculino-6.html">6ª Classe</a></li>
+          <li><a href="chaveamento-masculino-7.html">7ª Classe</a></li>
+          <li><a href="chaveamento-masculino-iniciantes.html">Iniciantes</a></li>
         </ul>
       </li>
 
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/programacao-simples.html" class="nav-link">Programação</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/regulamento" class="nav-link">Regulamento</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/estatisticas" class="nav-link">Estatísticas</a></li>
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/inscritos" class="nav-link">Tenistas Inscritos</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/regulamento.html" class="nav-link">Regulamento</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/estatisticas.html" class="nav-link">Estatísticas</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/inscritos.html" class="nav-link">Tenistas Inscritos</a></li>
     </ul>
   </nav>
 
-  <!-- Área do Chaveamento / Iframe forçado no tamanho original -->
-  <main class="bracket-section">
-    <div class="bracket-card">
-      <iframe name="chaveamento" src="chaveamento-masculino-2-interno.html" title="Chaveamento Masculino 1" scrolling="no"></iframe>
+  <!-- ÁREA PRINCIPAL -->
+  <main class="content-section">
+    <div class="action-card">
+      <h2>Chaveamento - Feminino - 2ª Classe</h2>
+      <p>Clique abaixo para visualizar o chaveamento.</p>
+      
+      <button class="btn-trigger-modal" onclick="abrirModal()">
+        VISUALIZAR CHAVEAMENTO
+      </button>
     </div>
   </main>
+
+  <!-- JANELA MODAL COM ROLAGEM COMPLETA DO CONTEÚDO -->
+  <div class="modal-overlay" id="modalProgramacao" onclick="fecharModalFora(event)">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Chaveamento - Feminino - 2ª Classe</h3>
+        <button class="modal-close-btn" onclick="fecharModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe name="programacao" src="chaveamento-feminino-2-interno.html" title="Chaveamento Feminino - 2ª Classe"></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Rodapé -->
   <footer class="site-footer">
     <p><strong>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</strong></p>
     <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
   </footer>
+
+  <!-- SCRIPT DE CONTROLE DA MODAL -->
+  <script>
+    function abrirModal() {
+      document.getElementById('modalProgramacao').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharModal() {
+      document.getElementById('modalProgramacao').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function fecharModalFora(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        fecharModal();
+      }
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        fecharModal();
+      }
+    });
+  </script>
 
 </body>
 </html>

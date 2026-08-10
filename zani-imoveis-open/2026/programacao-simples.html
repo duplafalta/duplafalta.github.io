@@ -6,11 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dupla Falta - CINCATE - São Gabriel da Palha - ES</title>
 
+  <!-- Favicons -->
   <link rel="shortcut icon" href="https://duplafalta.com.br/images/duplafalta.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
+
+  <!-- Open Graph / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dupla Falta - CINCATE - São Gabriel da Palha - ES">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Script do Menu Principal -->
   <script src="https://duplafalta.com.br/menu/principal/principal.js"></script>
 
   <style>
@@ -71,6 +79,8 @@
       text-align: center;
       white-space: nowrap;
     }
+
+    .btn-associe:hover { opacity: 0.9; }
 
     /* Menus */
     .integrated-nav {
@@ -135,10 +145,10 @@
 
     .banner-section img { max-width: 100%; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
 
-    /* Área do Card */
+    /* Área do Card de Acesso Direto */
     .content-section {
       background-color: var(--bg-red-dark);
-      padding: 50px 15px 70px 15px;
+      padding: 60px 15px 80px 15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -169,119 +179,22 @@
       line-height: 1.5;
     }
 
-    .btn-trigger-modal {
+    .btn-action-direct {
       display: inline-block;
       background-color: var(--primary-blue);
       color: #ffffff;
-      border: none;
+      text-decoration: none;
       font-weight: 700;
       font-size: 1rem;
-      padding: 14px 28px;
+      padding: 16px 32px;
       border-radius: 6px;
-      cursor: pointer;
       transition: background-color 0.2s, transform 0.1s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    .btn-trigger-modal:hover {
+    .btn-action-direct:hover {
       background-color: #0f82aa;
       transform: translateY(-2px);
-    }
-
-    /* --- ESTRUTURA DA MODAL COM ROLAGEM TOTAL DE CONTEÚDO --- */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      padding: 15px;
-    }
-
-    .modal-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal-container {
-      background-color: #ffffff;
-      width: 100%;
-      max-width: 1000px;
-      height: 90vh; /* Ocupa 90% da altura da janela */
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      overflow: hidden;
-      animation: modalSlide 0.3s ease-out;
-    }
-
-    @keyframes modalSlide {
-      from { transform: translateY(-15px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .modal-header {
-      background-color: var(--bg-dark);
-      color: #ffffff;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-shrink: 0; /* Impede o cabeçalho de encolher ao rolar */
-    }
-
-    .modal-header h3 {
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .modal-close-btn {
-      background: none;
-      border: none;
-      color: #ffffff;
-      font-size: 1.6rem;
-      font-weight: bold;
-      cursor: pointer;
-      line-height: 1;
-      padding: 0 5px;
-      transition: color 0.2s;
-    }
-
-    .modal-close-btn:hover {
-      color: var(--primary-blue);
-    }
-
-    /* Permite rolagem vertical e horizontal livres para exibir todo o arquivo interno */
-    .modal-body {
-      background-color: #ffffff;
-      flex: 1;
-      width: 100%;
-      overflow: auto; /* Habilita rolagem vertical/horizontal quando necessário */
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* IE/Edge */
-    }
-
-    .modal-body::-webkit-scrollbar {
-      display: none; /* Chrome, Safari e Edge */
-    }
-
-    .modal-body iframe {
-      width: 965px;
-      height: 100%;
-      min-height: 5200px; /* Garante que toda a extensão vertical do arquivo seja renderizada */
-      max-width: 100%;
-      border: 0;
-      display: block;
     }
 
     /* Rodapé */
@@ -305,10 +218,8 @@
       .nav-list { flex-direction: column; width: 100%; }
       .nav-item { width: 100%; text-align: center; }
       .dropdown-menu { position: static; box-shadow: none; border: none; background-color: rgba(0, 0, 0, 0.1); }
-      
-      .modal-container {
-        height: 95vh;
-      }
+      .action-card { padding: 30px 20px; }
+      .btn-action-direct { width: 100%; display: block; }
     }
   </style>
 </head>
@@ -376,68 +287,31 @@
         </ul>
       </li>
 
-      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/programacao-simples.html" class="nav-link">Programação</a></li>
+      <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html" class="nav-link">Programação</a></li>
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/regulamento.html" class="nav-link">Regulamento</a></li>
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/estatisticas.html" class="nav-link">Estatísticas</a></li>
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/2026/inscritos.html" class="nav-link">Tenistas Inscritos</a></li>
     </ul>
   </nav>
 
-  <!-- ÁREA PRINCIPAL -->
+  <!-- ÁREA PRINCIPAL COM ACESSO EM TEMPO REAL -->
   <main class="content-section">
     <div class="action-card">
       <h2>Programação de Jogos - Simples</h2>
-      <p>Clique abaixo para visualizar a tabela completa de horários, quadras e jogos agendados.</p>
+      <p>Acompanhe a tabela atualizada em tempo real com os horários, quadras e confrontos do torneio.</p>
       
-      <button class="btn-trigger-modal" onclick="abrirModal()">
-        VISUALIZAR PROGRAMAÇÃO
-      </button>
+      <!-- Abre o conteúdo diretamente em tela cheia com target="_blank" -->
+      <a href="programacao-simples-interno.html" target="_blank" class="btn-action-direct">
+        ABRIR PROGRAMAÇÃO EM TEMPO REAL ↗
+      </a>
     </div>
   </main>
-
-  <!-- JANELA MODAL COM ROLAGEM COMPLETA DO CONTEÚDO -->
-  <div class="modal-overlay" id="modalProgramacao" onclick="fecharModalFora(event)">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h3>Programação de Simples</h3>
-        <button class="modal-close-btn" onclick="fecharModal()">&times;</button>
-      </div>
-      <div class="modal-body">
-        <iframe name="programacao" src="programacao-simples-interno.html" title="Programação de Simples Interno"></iframe>
-      </div>
-    </div>
-  </div>
 
   <!-- Rodapé -->
   <footer class="site-footer">
     <p><strong>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</strong></p>
     <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
   </footer>
-
-  <!-- SCRIPT DE CONTROLE DA MODAL -->
-  <script>
-    function abrirModal() {
-      document.getElementById('modalProgramacao').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function fecharModal() {
-      document.getElementById('modalProgramacao').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-
-    function fecharModalFora(event) {
-      if (event.target.classList.contains('modal-overlay')) {
-        fecharModal();
-      }
-    }
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        fecharModal();
-      }
-    });
-  </script>
 
 </body>
 </html>
