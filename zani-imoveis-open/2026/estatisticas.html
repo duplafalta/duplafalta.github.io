@@ -26,7 +26,7 @@
       --bg-dark: #333333;
       --bg-light: #EFEFEF;
       --bg-red: #AF0204;
-      --bg-red-hover: #8C0203;
+      --bg-red-hover: #8C0203; /* Vermelho escuro do menu da imagem */
       --bg-red-dark: #7D0103;
       --primary-blue: #149DCC;
       --text-dark: #434343;
@@ -104,7 +104,7 @@
       opacity: 0.9;
     }
 
-    /* --- Menus Incorporados --- */
+    /* --- Base dos Menus Incorporados --- */
     .integrated-nav {
       background-color: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -138,17 +138,58 @@
       color: var(--bg-red);
     }
 
-    /* Terceiro Menu (Menu do Torneio - Barra Vermelha) */
+    /* --- Submenus (Dropdowns CSS) --- */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      list-style: none;
+      z-index: 100;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .dropdown-menu a {
+      padding: 10px 15px;
+      color: var(--text-dark);
+      text-decoration: none;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .nav-item:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* --- Terceiro Menu (Menu do Evento - Vermelho) --- */
     .event-nav {
       background-color: var(--bg-red-hover);
     }
 
     .event-nav .nav-link {
       color: #ffffff;
-      padding: 10px 18px;
+      padding: 12px 18px;
     }
 
     .event-nav .nav-link:hover {
+      background-color: var(--bg-red);
+      color: #ffffff;
+    }
+
+    /* Customização do Dropdown para o Menu Vermelho */
+    .event-nav .dropdown-menu {
+      background-color: var(--bg-red-hover);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .event-nav .dropdown-menu a {
+      color: #ffffff;
+    }
+
+    .event-nav .dropdown-menu a:hover {
       background-color: var(--bg-red);
       color: #ffffff;
     }
@@ -187,7 +228,7 @@
       background-color: #ffffff;
       border-radius: 8px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      overflow: hidden; /* Remove barras de rolagem do container */
+      overflow: hidden; 
     }
 
     .iframe-card iframe {
@@ -195,7 +236,7 @@
       height: 100%;
       border: 0;
       display: block;
-      overflow: hidden; /* Garante remoção de scroll no iframe */
+      overflow: hidden; 
     }
 
     /* Rodapé */
@@ -246,6 +287,13 @@
         text-align: center;
       }
 
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
       .iframe-card {
         height: 300px;
       }
@@ -271,7 +319,7 @@
     <a href="https://duplafalta.com.br/associacao/index.html" class="btn-associe">Associe-se</a>
   </header>
 
-  <!-- 2. Segundo Menu (Substitui 'zanitopo') -->
+  <!-- 2. Segundo Menu (Links Gerais) -->
   <nav class="integrated-nav">
     <ul class="nav-list">
       <li class="nav-item"><a href="https://duplafalta.com.br/zani-imoveis-open/index.html" class="nav-link">Página Principal</a></li>
@@ -289,13 +337,35 @@
     </a>
   </section>
 
-  <!-- 3. Terceiro Menu (Substitui 'zani') -->
+  <!-- 3. Terceiro Menu (IDÊNTICO AO DA IMAGEM) -->
   <nav class="integrated-nav event-nav">
     <ul class="nav-list">
-      <li class="nav-item"><a href="index.html" class="nav-link">O Torneio</a></li>
-      <li class="nav-item"><a href="programacao-simples.html" class="nav-link">Programação e Chaves</a></li>
+      
+      <!-- Dropdown Simples Feminino -->
+      <li class="nav-item">
+        <a href="#" class="nav-link">Simples Feminino &#9662;</a>
+        <ul class="dropdown-menu">
+          <!-- Altere os links e categorias abaixo conforme necessário -->
+          <li><a href="#">Categoria A</a></li>
+          <li><a href="#">Categoria B</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown Simples Masculino -->
+      <li class="nav-item">
+        <a href="#" class="nav-link">Simples Masculino &#9662;</a>
+        <ul class="dropdown-menu">
+          <!-- Altere os links e categorias abaixo conforme necessário -->
+          <li><a href="#">Categoria A</a></li>
+          <li><a href="#">Categoria B</a></li>
+          <li><a href="#">Categoria C</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="programacao-simples.html" class="nav-link">Programação</a></li>
       <li class="nav-item"><a href="regulamento.html" class="nav-link">Regulamento</a></li>
-      <li class="nav-item"><a href="galeria.html" class="nav-link">Fotos do Evento</a></li>
+      <li class="nav-item"><a href="estatisticas-interno.html" class="nav-link">Estatísticas</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Tenistas Inscritos</a></li>
     </ul>
   </nav>
 
