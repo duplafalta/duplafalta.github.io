@@ -1,170 +1,419 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-  <!-- Site made with Mobirise Website Builder v6.1.12, https://mobirise.com -->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo-1000x1000.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
   <title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=dyEVec"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=dyEVec" type="text/css">
 
-  
-  
-  
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/images/logo-1000x1000.png" type="image/x-icon">
+
+  <!-- Fonte Google - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --bg-dark: #333333;
+      --bg-light: #EFEFEF;
+      --bg-red: #AF0204;
+      --bg-red-hover: #8C0203;
+      --bg-red-dark: #7D0103;
+      --primary-blue: #149DCC;
+      --text-dark: #434343;
+      --border-color: #dcdcdc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Topo e Header */
+    .site-header {
+      background-color: var(--bg-dark);
+      padding: 10px 0;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      padding: 10px 15px !important;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-blue) !important;
+    }
+
+    /* Submenus e Dropdowns */
+    .dropdown-menu {
+      background-color: var(--bg-dark);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-item {
+      color: #ffffff !important;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--bg-red);
+      color: #ffffff !important;
+    }
+
+    .btn-associe {
+      background-color: var(--primary-blue);
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-associe:hover {
+      opacity: 0.9;
+    }
+
+    /* Seção Banner Principal (Zani Imóveis Open 2026) */
+    .hero-banner-section {
+      background-color: var(--bg-red-dark);
+      padding: 40px 0;
+      color: #ffffff;
+    }
+
+    .hero-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-custom-blue {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-custom-blue:hover {
+      background-color: #0f82aa;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Seção de Torneios / Cards */
+    .tournaments-section {
+      padding: 50px 0;
+    }
+
+    .tournament-card {
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .tournament-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .tournament-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .tournament-card .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Parceiros */
+    .sponsors-section {
+      background-color: #ffffff;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .sponsor-logo {
+      max-height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(20%);
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+
+    .sponsor-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background-color: var(--bg-light);
+      border-top: 1px solid #999999;
+      color: var(--text-dark);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    /* Ajustes Mobile */
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background-color: var(--bg-dark);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      .dropdown-menu {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding-left: 15px;
+      }
+      .btn-associe {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  
-  <section data-bs-version="5.1" class="menu menu2 cid-tvKyQIcvOy" once="menu" id="menu2-0">
-    
-    <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://duplafalta.com.br">
-                        <img src="assets/images/logo-1000x1000.png" alt="Dupla Falta" style="height: 4.9rem;">
-                    </a>
-                </span>
-                
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn"></span>Principal</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle text-white display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><span class="mbri-info mbr-iconfont mbr-iconfont-btn"></span>Sobre</a><div class="dropdown-menu" aria-labelledby="dropdown-309"><a class="dropdown-item text-white text-primary display-4" href="sobre.html">Associação</a><a class="show dropdown-item text-white text-primary display-4" href="https://duplafalta.com.br/diretoria.html">Diretoria</a></div></li><li class="nav-item"><a class="nav-link link show text-white text-primary display-4" href="https://duplafalta.com.br/calendario.html"><span class="mbri-calendar mbr-iconfont mbr-iconfont-btn"></span>Calendário</a></li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><span class="mbri-numbered-list mbr-iconfont mbr-iconfont-btn"></span>Ranking</a><div class="dropdown-menu" aria-labelledby="dropdown-617"><div class="dropdown"><a class="text-white dropdown-item text-primary dropdown-toggle display-4" href="https://duplafalta.com.br/ranking/finals.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Masculino</a><div class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-320"><a class="text-white show dropdown-item text-primary display-4" href="https://duplafalta.com.br/ranking/finals-masculino.html">Finals</a><a class="text-white show dropdown-item text-primary display-4" href="https://duplafalta.com.br/ranking/challenger-masculino.html">Challenger</a><a class="text-white dropdown-item text-primary display-4" href="https://duplafalta.com.br/ranking/future-masculino.html"><p>Future</p></a></div></div><div class="dropdown"><a class="text-white dropdown-item text-primary dropdown-toggle display-4" href="https://duplafalta.com.br/ranking/challenger.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Feminino</a><div class="dropdown-menu dropdown-submenu" aria-labelledby="dropdown-551"><a class="text-white show dropdown-item text-primary display-4" href="https://duplafalta.com.br/ranking/finals-feminino.html">Finals</a><a class="text-white show dropdown-item text-primary display-4" href="https://duplafalta.com.br/ranking/challenger-feminino.html">Challenger</a></div></div></div></li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><span class="mbri-video-play mbr-iconfont mbr-iconfont-btn"></span>Mídia</a><div class="dropdown-menu" aria-labelledby="dropdown-418"><a class="show text-white dropdown-item text-primary display-4" href="https://duplafalta.com.br/fotos.html">Fotos</a><a class="show text-white dropdown-item display-4" href="https://mobiri.se">Vídeos</a></div></li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://mobiri.se" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true"><span class="mbri-flag mbr-iconfont mbr-iconfont-btn"></span>Torneios</a><div class="dropdown-menu" aria-labelledby="dropdown-645"><a class="show text-white dropdown-item text-primary display-4" href="https://duplafalta.com.br/inscricao.html">Inscrição</a><a class="show text-white dropdown-item text-primary display-4" href="https://duplafalta.com.br/torneios/index.html">Resultados</a></div></li>
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="https://mobiri.se"><span class="mbrib-letter mbr-iconfont mbr-iconfont-btn"></span>Contato</a>
-                    </li></ul>
-                
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://duplafalta.com.br/associacao">Associe-se</a></div>
-            </div>
+
+  <!-- 1. Cabeçalho / Menu de Navegação -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="https://duplafalta.com.br">
+          <img src="assets/images/logo-1000x1000.png" alt="Dupla Falta">
+        </a>
+
+        <!-- Botão Menu Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens do Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Principal</a>
+            </li>
+
+            <!-- Dropdown Sobre -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill me-1"></i> Sobre
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownSobre">
+                <li><a class="dropdown-item" href="sobre.html">Associação</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/diretoria.html">Diretoria</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://duplafalta.com.br/calendario.html"><i class="bi bi-calendar-event-fill me-1"></i> Calendário</a>
+            </li>
+
+            <!-- Dropdown Ranking -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownRanking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list-ol me-1"></i> Ranking
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownRanking">
+                <li><strong class="dropdown-header text-primary">Masculino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-masculino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-masculino.html">Challenger</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/future-masculino.html">Future</a></li>
+                <li><hr class="dropdown-divider bg-secondary"></li>
+                <li><strong class="dropdown-header text-primary">Feminino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-feminino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-feminino.html">Challenger</a></li>
+              </ul>
+            </li>
+
+            <!-- Dropdown Mídia -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownMidia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-play-btn-fill me-1"></i> Mídia
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMidia">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/fotos.html">Fotos</a></li>
+                <li><a class="dropdown-item" href="#">Vídeos</a></li>
+              </ul>
+            </li>
+
+            <!-- Dropdown Torneios -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownTorneios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-trophy-fill me-1"></i> Torneios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownTorneios">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/inscricao.html">Inscrição</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/torneios/index.html">Resultados</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-envelope-fill me-1"></i> Contato</a>
+            </li>
+          </ul>
+
+          <!-- Botão Associe-se -->
+          <a class="btn-associe" href="https://duplafalta.com.br/associacao">Associe-se</a>
         </div>
+      </div>
     </nav>
-</section>
+  </header>
 
-<section data-bs-version="5.1" class="header11 cid-tvKDvV8y3r" id="header11-1">
-
-    
-
-    
-    
-
+  <!-- 2. Destaque Zani Imóveis Open 2026 -->
+  <section class="hero-banner-section">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-4 image-wrapper">
-                <a href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html"><img class="w-100" src="assets/images/programacao-e-resultados-450x270.png" alt="Zani Imóveis Open - 2026"></a>
-            </div>
-            <div class="col-12 col-md">
-                <div class="text-wrapper text-center">
-                    
-                    
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-7" href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html"><span class="mbri-touch mbr-iconfont mbr-iconfont-btn"></span>Clique AQUI e veja Programação e Resultados<br></a></div>
-                </div>
-            </div>
+      <div class="row align-items-center justify-content-center g-4">
+        <div class="col-12 col-md-5 text-center">
+          <a href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html">
+            <img class="img-fluid rounded shadow" src="assets/images/programacao-e-resultados-450x270.png" alt="Zani Imóveis Open - 2026">
+          </a>
         </div>
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <div class="hero-card">
+            <h3 class="text-dark fw-bold mb-3">Zani Imóveis Open 2026</h3>
+            <p class="text-muted mb-4">Acompanhe horários, chaves atualizadas e resultados em tempo real do nosso campeonato.</p>
+            <a class="btn-custom-blue" href="https://duplafalta.com.br/zani-imoveis-open/2026/programacao-simples.html" target="_blank">
+              <i class="bi bi-hand-index-thumb me-2"></i>Clique AQUI e veja Programação e Resultados
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section data-bs-version="5.1" class="features3 cid-tvLa97kuGA" id="features3-2">
-    
-    
+  <!-- 3. Seção de Hotsites / Torneios -->
+  <main class="tournaments-section">
     <div class="container">
+      <div class="row g-4">
         
-        <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <a href="https://duplafalta.com.br/zani-joias-open/"><img src="assets/images/capa-site.png" alt="Dupla Falta - Zani Jóias Open"></a>
-                    </div>
-                    <div class="item-content">
-                        
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Hotsite do Torneio de Tênis mais Charmoso do Espírito Santo.</p>
-                    </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="https://duplafalta.com.br/zani-joias-open/" class="btn btn-primary item-btn display-7" target="_blank">Acesse Aqui</a></div>
-                </div>
+        <!-- Card 1: Zani Jóias Open -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="tournament-card">
+            <a href="https://duplafalta.com.br/zani-joias-open/">
+              <img src="assets/images/capa-site.png" alt="Dupla Falta - Zani Jóias Open">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-muted">Hotsite do Torneio de Tênis mais Charmoso do Espírito Santo.</p>
+              <a href="https://duplafalta.com.br/zani-joias-open/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <a href="https://duplafalta.com.br/granexopen/"><img src="assets/images/site-capa-4.png" alt="Dupla Falta - Granex Open"></a>
-                    </div>
-                    <div class="item-content">
-                        
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Sessão exclusiva do Maior torneio de Tênis do ES.</p>
-                    </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="https://duplafalta.com.br/granexopen/" class="btn btn-primary item-btn display-7" target="_blank">Acesse aqui</a></div>
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <a href="https://duplafalta.com.br/copa-dupla-falta"><img src="assets/images/logo.png" alt="Dupla Falta - Copa Cooabriel"></a>
-                    </div>
-                    <div class="item-content">
-                        
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Maior torneio de Tênis por Equipes do Estado do Espírito Santo.<br></p>
-                    </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="https://duplafalta.com.br/copa-dupla-falta" class="btn btn-primary item-btn display-7">Acesse aqui</a></div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-</section>
 
-<section data-bs-version="5.1" class="clients1 cid-tvLbLpjAwP" id="clients1-3">
-    
-    <div class="images-container container-fluid">
-        <div class="mbr-section-head">
-            
-            
-            
+        <!-- Card 2: Granex Open -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="tournament-card">
+            <a href="https://duplafalta.com.br/granexopen/">
+              <img src="assets/images/site-capa-4.png" alt="Dupla Falta - Granex Open">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-muted">Sessão exclusiva do Maior torneio de Tênis do ES.</p>
+              <a href="https://duplafalta.com.br/granexopen/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
+            </div>
+          </div>
         </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-3 card">
-                <a href="https://asscontal.com.br" target="_blank"><img src="assets/images/asscontal-2021-600x300.png" alt="Asscontal Assessoria Contábil"></a>
+
+        <!-- Card 3: Copa Dupla Falta -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="tournament-card">
+            <a href="https://duplafalta.com.br/copa-dupla-falta">
+              <img src="assets/images/logo.png" alt="Dupla Falta - Copa Cooabriel">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-muted">Maior torneio de Tênis por Equipes do Estado do Espírito Santo.</p>
+              <a href="https://duplafalta.com.br/copa-dupla-falta" class="btn btn-outline-primary w-100 mt-auto">Acesse Aqui</a>
             </div>
-            <div class="col-md-3 card">
-                <a href="https://www.instagram.com/zanijoias/" target="_blank"><img src="assets/images/zani-joias-2023.png" alt="Zani Jóias e Ótica"></a>
-            </div>
-            <div class="col-md-3 card">
-                <a href="https://www.instagram.com/grafica_gomieri/" target="_blank"><img src="assets/images/grafica-gomieri-254x104.png" alt="Gráfica Gomieri"></a>
-            </div>
-            <div class="col-md-3 card">
-                <a href="https://www.granexdobrasil.com.br/" target="_blank"><img src="assets/images/granex-220x140.png" alt="Granex do Brasil"></a>
-            </div>
-            <div class="col-md-3 card">
-                <a href="https://www.instagram.com/riodoceconsultoria/" target="_blank"><img src="assets/images/rio-doce-2021-599x310.png" alt="Rio Doce Consultoria"></a>
-            </div>
-            
-            
-            
+          </div>
         </div>
+
+      </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/2211469" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com"> Website Software</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
-  <input name="animation" type="hidden">
-  </body>
+  </main>
+
+  <!-- 4. Seção de Patrocinadores / Parceiros -->
+  <section class="sponsors-section">
+    <div class="container">
+      <div class="row align-items-center justify-content-center g-4 text-center">
+        <div class="col-6 col-sm-4 col-md-2">
+          <a href="https://asscontal.com.br" target="_blank">
+            <img class="sponsor-logo img-fluid" src="assets/images/asscontal-2021-600x300.png" alt="Asscontal Assessoria Contábil">
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <a href="https://www.instagram.com/zanijoias/" target="_blank">
+            <img class="sponsor-logo img-fluid" src="assets/images/zani-joias-2023.png" alt="Zani Jóias e Ótica">
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <a href="https://www.instagram.com/grafica_gomieri/" target="_blank">
+            <img class="sponsor-logo img-fluid" src="assets/images/grafica-gomieri-254x104.png" alt="Gráfica Gomieri">
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <a href="https://www.granexdobrasil.com.br/" target="_blank">
+            <img class="sponsor-logo img-fluid" src="assets/images/granex-220x140.png" alt="Granex do Brasil">
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <a href="https://www.instagram.com/riodoceconsultoria/" target="_blank">
+            <img class="sponsor-logo img-fluid" src="assets/images/rio-doce-2021-599x310.png" alt="Rio Doce Consultoria">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fw-bold mb-1">Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</p>
+      <small class="text-muted">Todos os direitos reservados - Fundada em 04/07/2013</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle oficial -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
