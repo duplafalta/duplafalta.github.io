@@ -1,175 +1,363 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
 
-<title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
-<link href='https://duplafalta.com.br/images/duplafalta.ico' rel='shortcut icon'/>
-<link href='https://duplafalta.com.br/images/duplafalta.png' rel='shortcut icon'/>
-<link href='https://duplafalta.com.br/images/duplafalta.png' rel='apple-touch-icon'/>
-<link href='https://duplafalta.com.br/images/duplafalta.png' rel='shortcut icon' type='image/x-icon'/>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="https://duplafalta.com.br/images/duplafalta.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
 
-<script type="text/javascript" src="https://duplafalta.com.br/menu/principal/principal.js"></script>
+  <!-- Fonte Google - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-<style type="text/css">
-<!--
-body {
-	font-family: Roboto, Arial, Sans-serif;
-}
--->
-</style>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+  <style>
+    :root {
+      --bg-dark: #333333;
+      --bg-neutral-dark: #222222;
+      --bg-light: #EFEFEF;
+      --primary-blue: #149DCC;
+      --primary-blue-hover: #0f82aa;
+      --text-dark: #434343;
+      --border-color: #dcdcdc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Topo e Header */
+    .site-header {
+      background-color: var(--bg-dark);
+      padding: 10px 0;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      padding: 10px 15px !important;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-blue) !important;
+    }
+
+    /* Submenus e Dropdowns */
+    .dropdown-menu {
+      background-color: var(--bg-dark);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-item {
+      color: #ffffff !important;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff !important;
+    }
+
+    .btn-associe {
+      background-color: var(--primary-blue);
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-associe:hover {
+      opacity: 0.9;
+    }
+
+    /* Faixa de Título da Página */
+    .page-title-banner {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .page-title-banner h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    /* Seção do Grid de Resultados por Ano */
+    .results-section {
+      background-color: var(--bg-neutral-dark);
+      padding: 50px 0;
+      flex: 1;
+    }
+
+    .year-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 22px 15px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .year-card i {
+      color: var(--primary-blue);
+      transition: color 0.2s ease;
+    }
+
+    .year-card:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .year-card:hover i {
+      color: #ffffff;
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background-color: var(--bg-light);
+      border-top: 1px solid #999999;
+      color: var(--text-dark);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    /* Ajustes Mobile */
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background-color: var(--bg-dark);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      .dropdown-menu {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding-left: 15px;
+      }
+      .btn-associe {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .results-section { padding: 30px 15px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<div align="center">
-	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" height="140" bgcolor="#333333">
-		<tr>
-			<td align="center" width="20%" rowspan="3">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="index.html" target="_top">
-				<img border="0" src="https://duplafalta.com.br/images/topo/logo-95x95.png" width="95" height="95"></a></p>
-			</td>
-			
-			<td align="center" width="30%" rowspan="3">
-				<p style="margin-top: 0; margin-bottom: 0" align="left">
-				<font color="#FFFFFF">Associação de Tenistas em São Gabriel da Palha - ES </font></p>
-			</td>
-				
-			<td align="center" width="45%" style="border:medium none #FFFFFF; padding:2px; " rowspan="3">
-				<div id="principal">
-				<p style="margin-top: 0; margin-bottom: 0"></p>
-			</td>
+  <!-- 1. Cabeçalho / Menu de Navegação Superior -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="https://duplafalta.com.br">
+          <img src="https://duplafalta.com.br/images/topo/logo-95x95.png" alt="Dupla Falta">
+        </a>
 
-			<td width="20%" align="center" height="33%">
-				<p style="margin-top: 0; margin-bottom: 0"></p>
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="20%" align="center" height="33%" bgcolor="#149DCC">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="https://duplafalta.com.br/associacao/index.html" style="text-decoration: none">
-				<font color="#FFFFFF">Associe-se</font></a></p>
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="20%" align="center" height="33%">
-				<p style="margin-top: 0; margin-bottom: 0"></p>
-			</td>
-		</tr>
-	</table>
-</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div align="center">
-	<table border="1" width="100%" style="border-collapse: collapse; font-family:Arial; font-size:12pt; color:#000000; border-left-width:0px; border-right-width:0px; border-top-width:0px; border-bottom-width:1px" bgcolor="#FFFFFF" height="30">
-		<tr>
-			<td height="47" style="border:medium none #FFFFFF; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<font color="#1F2223" style="font-size: 14pt">Resultado dos Torneios</font></p>
-			</td>
-		</tr>
-	</table>
-</div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Principal</a>
+            </li>
 
-<div align="center">
-	<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse; font-family:Arial; font-size:12pt; color:#FFFFFF" height="380">
-		<tr>
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: medium none #999999; border-right: 1px solid #999999; border-top: medium none #999999; border-bottom: 1px solid #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2013/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2013</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: 1px solid #999999; border-top: medium none #999999; border-bottom: 1px solid #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2014/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2014</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: medium none #999999; border-top: medium none #999999; border-bottom: 1px solid #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2015/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2015</b></font></a></p>
-			</td>
-		</tr>
-	
-		<tr>
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: medium none #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2016/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2016</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2017/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2017</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: medium none #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" href="torneios/2018/index.html" style="text-decoration: none">
-				<font face="Roboto" color="#333333" size="3"><b>2018</b></font></a></p>
-			</td>
-		</tr>
-	
-		<tr>
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: medium none #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2019/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2019</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2021/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2021</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: medium none #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2022/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2022</b></font></a></p>
-			</td>
-		</tr>
-	
-		<tr>
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: medium none #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2023/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2023</b></font></a></p>
-			</td>
-			
-			<td class="mudacorum" onmouseover="this.className='mudacordois'" onmouseout="this.className='mudacorum'" align="center" width="33%" height="25%" style="border-left: medium none #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="torneios/2024/index.html">
-				<font face="Roboto" color="#333333" size="3"><b>2024</b></font></a></p>
-			</td>
-			
-			<td align="center" width="33%" height="25%" style="border-left: 1px solid #999999; border-right: medium none #999999; border-top: 1px solid #999999; border-bottom: medium none #999999; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px">
-			<p align="center" style="margin-top: 0; margin-bottom: 0"></p>
-			</td>
-		</tr>
-	</table>
-</div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill me-1"></i> Sobre
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownSobre">
+                <li><a class="dropdown-item" href="sobre.html">Associação</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/diretoria.html">Diretoria</a></li>
+              </ul>
+            </li>
 
-<hr>
+            <li class="nav-item">
+              <a class="nav-link" href="https://duplafalta.com.br/calendario.html"><i class="bi bi-calendar-event-fill me-1"></i> Calendário</a>
+            </li>
 
-<div align="center">
-	<table border="0" width="100%" cellspacing="0" cellpadding="0" height="40" bordercolor="#999999" style="border-width:0px; ">
-		<tr>
-			<td style="border:medium none #999999; padding:1px; ">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<font face="Roboto" color="#434343" size="3"><b>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</b></font><br>
-				<font face="Roboto" color="#434343" size="2">Todos os direitos reservados - Fundada em 04/07/2013</font></p>
-			</td>
-		</tr>
-	</table>
-</div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownRanking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list-ol me-1"></i> Ranking
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownRanking">
+                <li><strong class="dropdown-header text-primary">Masculino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-masculino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-masculino.html">Challenger</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/future-masculino.html">Future</a></li>
+                <li><hr class="dropdown-divider bg-secondary"></li>
+                <li><strong class="dropdown-header text-primary">Feminino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-feminino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-feminino.html">Challenger</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownMidia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-play-btn-fill me-1"></i> Mídia
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMidia">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/fotos.html">Fotos</a></li>
+                <li><a class="dropdown-item" href="#">Vídeos</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownTorneios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-trophy-fill me-1"></i> Torneios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownTorneios">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/inscricao.html">Inscrição</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/torneios/index.html">Resultados</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-envelope-fill me-1"></i> Contato</a>
+            </li>
+          </ul>
+
+          <a class="btn-associe" href="https://duplafalta.com.br/associacao">Associe-se</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. Faixa do Título -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Resultado dos Torneios</h1>
+    </div>
+  </section>
+
+  <!-- 3. Galeria de Anos em Grid Responsivo -->
+  <main class="results-section">
+    <div class="container">
+      <div class="row g-3 justify-content-center">
+        
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2013/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2013
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2014/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2014
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2015/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2015
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2016/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2016
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2017/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2017
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2018/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2018
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2019/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2019
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2021/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2021
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2022/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2022
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2023/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2023
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="torneios/2024/index.html" class="year-card" target="_top">
+            <i class="bi bi-trophy-fill"></i> 2024
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 4. Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fw-bold mb-1">Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</p>
+      <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
