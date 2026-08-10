@@ -1,215 +1,426 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Dupla Falta">
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="">
-  <meta property="og:image" content="">
   <meta name="twitter:title" content="Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
   <meta name="description" content="Associação de Tenistas em São Gabriel da Palha - ES">
-  
-<title>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</title>
 
-<script type="text/javascript" src="https://duplafalta.com.br/menu/principal/principal.js"></script>
+  <title>Associação - Dupla Falta</title>
 
-<link href='https://fonts.googleapis.com/css?family=Roboto ' rel='stylesheet' type='text/css'>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="https://duplafalta.com.br/menu/assets/images/logo-256x256.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://duplafalta.com.br/images/duplafalta.png">
 
-<style type="text/css">
-<!--
-body {
-	font-family: Roboto, Arial, Sans-serif;
-}
--->
-</style>
+  <!-- Fonte Google - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-}
-</style>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+  <style>
+    :root {
+      --bg-dark: #333333;
+      --bg-neutral-dark: #222222;
+      --bg-light: #EFEFEF;
+      --primary-blue: #149DCC;
+      --primary-blue-hover: #0f82aa;
+      --primary-green: #32CD32;
+      --primary-green-hover: #28a428;
+      --text-dark: #434343;
+      --border-color: #dcdcdc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Topo e Header */
+    .site-header {
+      background-color: var(--bg-dark);
+      padding: 10px 0;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      padding: 10px 15px !important;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-blue) !important;
+    }
+
+    /* Submenus e Dropdowns */
+    .dropdown-menu {
+      background-color: var(--bg-dark);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-item {
+      color: #ffffff !important;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff !important;
+    }
+
+    .btn-associe {
+      background-color: var(--primary-blue);
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-associe:hover {
+      opacity: 0.9;
+    }
+
+    /* Faixa de Título da Página */
+    .page-title-banner {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .page-title-banner h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    /* Seção do Conteúdo de Associação */
+    .association-section {
+      background-color: var(--bg-neutral-dark);
+      padding: 40px 0 60px 0;
+      flex: 1;
+    }
+
+    /* Card de Inscrição em Destaque */
+    .cta-card {
+      background-color: var(--primary-green);
+      border-radius: 8px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      margin-bottom: 40px;
+    }
+
+    .cta-card:hover {
+      background-color: var(--primary-green-hover);
+      transform: translateY(-2px);
+    }
+
+    .cta-card a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Subtítulo da Grade de Anos */
+    .years-section-title {
+      color: #ffffff;
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Cards dos Anos */
+    .year-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 22px 15px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .year-card i {
+      color: var(--primary-blue);
+      transition: color 0.2s ease;
+    }
+
+    .year-card:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .year-card:hover i {
+      color: #ffffff;
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background-color: var(--bg-light);
+      border-top: 1px solid #999999;
+      color: var(--text-dark);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    /* Ajustes Mobile */
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background-color: var(--bg-dark);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      .dropdown-menu {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding-left: 15px;
+      }
+      .btn-associe {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .cta-card a { font-size: 1.1rem; }
+      .association-section { padding: 30px 15px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<div align="center">
-	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" height="100" bgcolor="#333333">
-		<tr>
-			<td align="center" width="15%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="https://duplafalta.com.br" style="text-decoration: none;" target="_top">
-				<img border="0" src="https://duplafalta.com.br/images/logo/logo-120x120.png" width="85" height="85"></a>
-				</p>
-			</td>
-			
-			<td align="right" width="65%" style="border:medium none #FFFFFF; padding:2px; ">
-				<div id="principal">
-					<p style="margin-top: 0; margin-bottom: 0"></p>
-				</div>
-			</td>
+  <!-- 1. Cabeçalho / Menu de Navegação Superior -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="https://duplafalta.com.br">
+          <img src="https://duplafalta.com.br/images/topo/logo-95x95.png" alt="Dupla Falta">
+        </a>
 
-			<td width="20%" align="center" height="99%" bgcolor="#149DCC">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a href="https://duplafalta.com.br/associacao/index.html" style="text-decoration: none; font-weight:700">
-				<font color="#FFFFFF">Associe-se</font></a></p>
-			</td>
-		</tr>
-	</table>
-</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-	<div align="center">
-		<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="50">
-			<tr>
-				<td>
-					<p align="center" style="margin-top: 0; margin-bottom: 0">
-					<font face="Roboto" size="4" color="#333333">ASSOCIAÇÃO</font>
-					</p>
-				</td>
-			</tr>
-		</table>
-	</div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Principal</a>
+            </li>
 
-	<div align="center">
-		<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="150" bgcolor="#EFEFEF">
-			<tr>
-				<td style="padding: 0" bgcolor="#32CD32">
-					<p align="center" style="margin-top: 0; margin-bottom: 0">
-					<a target="_blank" href="https://form.jotform.com/51023331746648" style="text-decoration: none">
-					<font face="Roboto" size="4" color="#333333">CLIQUE AQUI PARA SE ASSOCIAR</font></a>
-					</p>
-				</td>
-			</tr>
-		</table>
-	</div>
-	
-	<br>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill me-1"></i> Sobre
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownSobre">
+                <li><a class="dropdown-item" href="sobre.html">Associação</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/diretoria.html">Diretoria</a></li>
+              </ul>
+            </li>
 
-	<div align="center">
-		<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="50" bgcolor="#EFEFEF">
-			<tr>
-				<td style="padding: 0">
-					<p align="center" style="margin-top: 0; margin-bottom: 0">
-					<font face="Roboto" size="4" color="#333333">Escolha o ano para mais informações</font>
-					</p>
-				</td>
-			</tr>
-		</table>
-	</div>
+            <li class="nav-item">
+              <a class="nav-link" href="https://duplafalta.com.br/calendario.html"><i class="bi bi-calendar-event-fill me-1"></i> Calendário</a>
+            </li>
 
-<div align="center">	
-	<table border="0" cellpadding="0" style="border-collapse: collapse" width="100%" height="400">
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-top:medium none #999999; border-bottom:1px solid #999999" height="25%" align="center">
-				<p align="center" style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" href="https://duplafalta.com.br/associacao/2015/index.html" style="text-decoration: none">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2015</font></a>
-				</p>
-			</td>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownRanking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list-ol me-1"></i> Ranking
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownRanking">
+                <li><strong class="dropdown-header text-primary">Masculino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-masculino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-masculino.html">Challenger</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/future-masculino.html">Future</a></li>
+                <li><hr class="dropdown-divider bg-secondary"></li>
+                <li><strong class="dropdown-header text-primary">Feminino</strong></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/finals-feminino.html">Finals</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/ranking/challenger-feminino.html">Challenger</a></li>
+              </ul>
+            </li>
 
-			<td width="33%" align="center" style="border-left:1px solid #999999; border-right:1px solid #999999; border-top:medium none #999999; border-bottom:1px solid #999999; padding:1px; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" href="https://duplafalta.com.br/associacao/2016/index.html" style="text-decoration: none">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2016</font></a>
-				</p>
-			</td>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownMidia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-play-btn-fill me-1"></i> Mídia
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMidia">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/fotos.html">Fotos</a></li>
+                <li><a class="dropdown-item" href="#">Vídeos</a></li>
+              </ul>
+            </li>
 
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-top:medium none #999999; border-bottom:1px solid #999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" href="https://duplafalta.com.br/associacao/2017/index.html" style="text-decoration: none">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2017</font></a>
-				</p>
-			</td>
-		</tr>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownTorneios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-trophy-fill me-1"></i> Torneios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownTorneios">
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/inscricao.html">Inscrição</a></li>
+                <li><a class="dropdown-item" href="https://duplafalta.com.br/torneios/index.html">Resultados</a></li>
+              </ul>
+            </li>
 
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%" align="center">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2018/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2018</font></a>
-				</p>
-			</td>
-		
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2019/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2019</font></a>
-				</p>
-			</td>
-				
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2020/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2020</font></a>
-				</p>
-			</td>
-		</tr>
-			
-		<tr>
-			<td width="33%" style="padding:1px; border-left:medium none #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%" align="center">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2021/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2021</font></a>
-				</p>
-			</td>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-envelope-fill me-1"></i> Contato</a>
+            </li>
+          </ul>
 
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2022/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2022</font></a>
-				</p>
-			</td>
-				
-			<td width="33%" align="center" style="border-top:1px solid #999999; padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-bottom:medium none #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2023/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2023</font></a>
-				</p>
-			</td>
-		</tr>
-			
-		<tr>
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2024/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2024</font></a>
-				</p>
-			</td>
+          <a class="btn-associe" href="https://duplafalta.com.br/associacao">Associe-se</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-			<td width="33%" align="center" style="padding:1px; border-left:1px solid #999999; border-right:1px solid #999999; border-bottom:1px solid #999999; border-top-color:#999999" height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2025/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2025</font></a>
-				</p>
-			</td>
-				
-			<td width="33%" align="center" style="border-top:1px solid #999999; padding:1px; border-left:1px solid #999999; border-right:medium none #999999; border-bottom:1px solid #999999; " height="25%">
-				<p style="margin-top: 0; margin-bottom: 0">
-				<a target="_top" style="text-decoration: none" href="https://duplafalta.com.br/associacao/2026/index.html">
-				<font face="Arial" style="font-size: 14pt" color="#333333">2026</font></a>
-				</p>
-			</td>
-		</tr>
-	</table>
-</div>
+  <!-- 2. Faixa do Título -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Associação</h1>
+    </div>
+  </section>
 
-<br>
-	
-<div align="center">
-	<table border="0" width="100%" cellspacing="0" cellpadding="0" height="40" bordercolor="#999999" style="border-width:0px; ">
-		<tr>
-			<td style="border:medium none #999999; padding:1px; " valign="middle">
-				<p align="center" style="margin-top: 0; margin-bottom: 0"><br>
-				<font face="Roboto" color="#434343" size="3"><b>Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</b></font><br>
-				<font face="Roboto" color="#434343" size="2">Todos os direitos reservados - Fundada em 04/07/2013</font></p>
-			</td>
-		</tr>
-	</table>
-</div>
+  <!-- 3. Seção Principal da Associação -->
+  <main class="association-section">
+    <div class="container">
+      
+      <!-- Card de Destaque Inscrição -->
+      <div class="cta-card">
+        <a href="https://form.jotform.com/51023331746648" target="_blank">
+          <i class="bi bi-person-plus-fill"></i> CLIQUE AQUI PARA SE ASSOCIAR
+        </a>
+      </div>
+
+      <!-- Subtítulo da Seleção de Ano -->
+      <p class="years-section-title">Escolha o ano para mais informações:</p>
+
+      <!-- Grid de Anos -->
+      <div class="row g-3 justify-content-center">
+        
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2015/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2015
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2016/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2016
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2017/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2017
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2018/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2018
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2019/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2019
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2020/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2020
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2021/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2021
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2022/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2022
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2023/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2023
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2024/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2024
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2025/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2025
+          </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3">
+          <a href="https://duplafalta.com.br/associacao/2026/index.html" class="year-card" target="_top">
+            <i class="bi bi-folder-fill"></i> 2026
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 4. Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fw-bold mb-1">Dupla Falta - Associação de Tenistas em São Gabriel da Palha - ES</p>
+      <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
