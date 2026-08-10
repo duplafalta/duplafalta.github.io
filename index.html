@@ -127,7 +127,7 @@
       transform: translateY(-2px);
     }
 
-    /* Seção de Torneios / Cards Sem Corte de Imagem */
+    /* --- SEÇÃO DE HOTSITES (FUNDO DA IMAGEM UNIFICADO EM BRANCO) --- */
     .tournaments-section {
       padding: 50px 0;
     }
@@ -147,30 +147,35 @@
       transform: translateY(-4px);
     }
 
-    /* CONTAINER DA IMAGEM: Ajustado para conter a imagem sem cortar */
     .tournament-card-img-wrapper {
-      background-color: #f8f9fa;
-      height: 220px;
+      background-color: #ffffff; /* Fundo idêntico ao das imagens para unificação total */
+      padding: 20px 20px 10px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 15px;
-      border-bottom: 1px solid var(--border-color);
+      min-height: 180px;
     }
 
     .tournament-card img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: 140px;
       width: auto;
       height: auto;
-      object-fit: contain; /* Impede cortes na imagem */
+      object-fit: contain;
+      display: block;
     }
 
     .tournament-card .card-body {
-      padding: 20px;
+      padding: 10px 20px 20px 20px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .tournament-card .card-text {
+      margin-bottom: 20px;
+      min-height: 48px;
     }
 
     /* Parceiros */
@@ -220,6 +225,9 @@
         display: block;
         text-align: center;
         margin-top: 10px;
+      }
+      .tournament-card .card-text {
+        min-height: auto;
       }
     }
   </style>
@@ -328,7 +336,7 @@
     </div>
   </section>
 
-  <!-- 3. Seção de Hotsites / Torneios (SEM CORTES NAS IMAGENS) -->
+  <!-- 3. Seção de Hotsites / Torneios -->
   <main class="tournaments-section">
     <div class="container">
       <div class="row g-4">
@@ -343,7 +351,7 @@
             </div>
             <div class="card-body">
               <p class="card-text text-muted">Hotsite do Torneio de Tênis mais Charmoso do Espírito Santo.</p>
-              <a href="https://duplafalta.com.br/zani-joias-open/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
+              <a href="https://duplafalta.com.br/zani-joias-open/" class="btn btn-outline-primary w-100" target="_blank">Acesse Aqui</a>
             </div>
           </div>
         </div>
@@ -358,7 +366,7 @@
             </div>
             <div class="card-body">
               <p class="card-text text-muted">Sessão exclusiva do Maior torneio de Tênis do ES.</p>
-              <a href="https://duplafalta.com.br/granexopen/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
+              <a href="https://duplafalta.com.br/granexopen/" class="btn btn-outline-primary w-100" target="_blank">Acesse Aqui</a>
             </div>
           </div>
         </div>
@@ -373,7 +381,7 @@
             </div>
             <div class="card-body">
               <p class="card-text text-muted">Maior torneio de Tênis por Equipes do Estado do Espírito Santo.</p>
-              <a href="https://duplafalta.com.br/copa-dupla-falta" class="btn btn-outline-primary w-100 mt-auto">Acesse Aqui</a>
+              <a href="https://duplafalta.com.br/copa-dupla-falta" class="btn btn-outline-primary w-100">Acesse Aqui</a>
             </div>
           </div>
         </div>
