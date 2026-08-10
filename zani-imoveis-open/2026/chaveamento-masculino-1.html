@@ -135,7 +135,7 @@
 
     .banner-section img { max-width: 100%; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
 
-    /* --- ÁREA DE CONTEÚDO --- */
+    /* Área do Card */
     .content-section {
       background-color: var(--bg-red-dark);
       padding: 50px 15px 70px 15px;
@@ -188,14 +188,14 @@
       transform: translateY(-2px);
     }
 
-    /* --- ESTILOS DA JANELA MODAL POP-UP --- */
+    /* --- JANELA MODAL SEM BARRAS VISÍVEIS DE ROLAGEM --- */
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -203,7 +203,7 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
-      padding: 20px;
+      padding: 15px;
     }
 
     .modal-overlay.active {
@@ -213,33 +213,34 @@
 
     .modal-container {
       background-color: #ffffff;
-      width: 100%;
-      max-width: 1050px;
-      height: 88vh;
-      border-radius: 10px;
+      width: fit-content;
+      height: fit-content;
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: 8px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
       overflow: hidden;
       animation: modalSlide 0.3s ease-out;
     }
 
     @keyframes modalSlide {
-      from { transform: translateY(-20px); opacity: 0; }
+      from { transform: translateY(-15px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
     .modal-header {
       background-color: var(--bg-dark);
       color: #ffffff;
-      padding: 15px 20px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .modal-header h3 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
     }
 
@@ -247,7 +248,7 @@
       background: none;
       border: none;
       color: #ffffff;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: bold;
       cursor: pointer;
       line-height: 1;
@@ -259,19 +260,23 @@
       color: var(--primary-blue);
     }
 
+    /* Ocultação visual das barras de rolagem no container do modal */
     .modal-body {
-      flex: 1;
-      width: 100%;
-      height: 100%;
       background-color: #ffffff;
-      overflow-x: auto;
+      overflow: auto;
       -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE e Edge antigos */
+    }
+
+    .modal-body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari e Edge moderno */
     }
 
     .modal-body iframe {
-      width: 100%;
-      min-width: 965px;
-      height: 100%;
+      width: 965px;
+      height: 700px;
+      max-width: 100%;
       border: 0;
       display: block;
     }
@@ -297,7 +302,10 @@
       .nav-list { flex-direction: column; width: 100%; }
       .nav-item { width: 100%; text-align: center; }
       .dropdown-menu { position: static; box-shadow: none; border: none; background-color: rgba(0, 0, 0, 0.1); }
-      .modal-container { height: 95vh; padding: 0; }
+      
+      .modal-body iframe {
+        height: 75vh;
+      }
     }
   </style>
 </head>
@@ -357,10 +365,10 @@
           <li><a href="chaveamento-masculino-1">1ª Classe</a></li>
           <li><a href="chaveamento-masculino-2">2ª Classe</a></li>
           <li><a href="chaveamento-masculino-3">3ª Classe</a></li>
-          <li><a href="chaveamento-masculino-4">4ª Classe</a></li>
-          <li><a href="chaveamento-masculino-5">5ª Classe</a></li>
-          <li><a href="chaveamento-masculino-6">6ª Classe</a></li>
-          <li><a href="chaveamento-masculino-7">7ª Classe</a></li>
+          <li><a href="chaveamento-msculino-4">4ª Classe</a></li>
+          <li><a href="chaveamento-msculino-5">5ª Classe</a></li>
+          <li><a href="chaveamento-msculino-6">6ª Classe</a></li>
+          <li><a href="chaveamento-msculino-7">7ª Classe</a></li>
           <li><a href="chaveamento-masculino-iniciantes">Iniciantes</a></li>
         </ul>
       </li>
@@ -372,11 +380,11 @@
     </ul>
   </nav>
 
-  <!-- ÁREA PRINCIPAL COM BOTÃO DISPARADOR DA MODAL -->
+  <!-- ÁREA PRINCIPAL -->
   <main class="content-section">
     <div class="action-card">
       <h2>Chaveamento Masculino - 1ª Classe</h2>
-      <p>Clique abaixo para abrir a tabela interativa em tela cheia com os confrontos e resultados do torneio.</p>
+      <p>Clique abaixo para visualizar a tabela de chaveamento adaptada à tela.</p>
       
       <button class="btn-trigger-modal" onclick="abrirModal()">
         VISUALIZAR CHAVEAMENTO
@@ -384,7 +392,7 @@
     </div>
   </main>
 
-  <!-- JANELA MODAL POP-UP -->
+  <!-- JANELA MODAL POP-UP (SEM SCROLLBAR VISÍVEL) -->
   <div class="modal-overlay" id="modalChaveamento" onclick="fecharModalFora(event)">
     <div class="modal-container">
       <div class="modal-header">
@@ -392,7 +400,7 @@
         <button class="modal-close-btn" onclick="fecharModal()">&times;</button>
       </div>
       <div class="modal-body">
-        <iframe name="chaveamento" src="chaveamento-masculino-1-interno.html" title="Chaveamento Masculino 1"></iframe>
+        <iframe name="chaveamento" src="chaveamento-masculino-1-interno.html" title="Chaveamento Masculino 1" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -403,16 +411,16 @@
     <span>Todos os direitos reservados - Fundada em 04/07/2013</span>
   </footer>
 
-  <!-- SCRIPT PARA CONTROLE DA MODAL -->
+  <!-- CONTROLE DA MODAL -->
   <script>
     function abrirModal() {
       document.getElementById('modalChaveamento').classList.add('active');
-      document.body.style.overflow = 'hidden'; // Impede rolagem na página ao fundo
+      document.body.style.overflow = 'hidden';
     }
 
     function fecharModal() {
       document.getElementById('modalChaveamento').classList.remove('active');
-      document.body.style.overflow = 'auto'; // Restaura rolagem da página
+      document.body.style.overflow = 'auto';
     }
 
     function fecharModalFora(event) {
@@ -421,7 +429,6 @@
       }
     }
 
-    // Fecha a modal ao pressionar a tecla ESC
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         fecharModal();
