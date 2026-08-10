@@ -96,7 +96,7 @@
       opacity: 0.9;
     }
 
-    /* Seção Banner Principal (Zani Imóveis Open 2026) */
+    /* Seção Banner Principal */
     .hero-banner-section {
       background-color: var(--bg-red-dark);
       padding: 40px 0;
@@ -127,7 +127,7 @@
       transform: translateY(-2px);
     }
 
-    /* Seção de Torneios / Cards */
+    /* Seção de Torneios / Cards Sem Corte de Imagem */
     .tournaments-section {
       padding: 50px 0;
     }
@@ -147,10 +147,23 @@
       transform: translateY(-4px);
     }
 
+    /* CONTAINER DA IMAGEM: Ajustado para conter a imagem sem cortar */
+    .tournament-card-img-wrapper {
+      background-color: #f8f9fa;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
     .tournament-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain; /* Impede cortes na imagem */
     }
 
     .tournament-card .card-body {
@@ -218,24 +231,20 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <!-- Logo -->
         <a class="navbar-brand" href="https://duplafalta.com.br">
           <img src="assets/images/logo-1000x1000.png" alt="Dupla Falta">
         </a>
 
-        <!-- Botão Menu Mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Itens do Menu -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Principal</a>
             </li>
 
-            <!-- Dropdown Sobre -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-info-circle-fill me-1"></i> Sobre
@@ -250,7 +259,6 @@
               <a class="nav-link" href="https://duplafalta.com.br/calendario.html"><i class="bi bi-calendar-event-fill me-1"></i> Calendário</a>
             </li>
 
-            <!-- Dropdown Ranking -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownRanking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-list-ol me-1"></i> Ranking
@@ -267,7 +275,6 @@
               </ul>
             </li>
 
-            <!-- Dropdown Mídia -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownMidia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-play-btn-fill me-1"></i> Mídia
@@ -278,7 +285,6 @@
               </ul>
             </li>
 
-            <!-- Dropdown Torneios -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownTorneios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-trophy-fill me-1"></i> Torneios
@@ -294,7 +300,6 @@
             </li>
           </ul>
 
-          <!-- Botão Associe-se -->
           <a class="btn-associe" href="https://duplafalta.com.br/associacao">Associe-se</a>
         </div>
       </div>
@@ -323,7 +328,7 @@
     </div>
   </section>
 
-  <!-- 3. Seção de Hotsites / Torneios -->
+  <!-- 3. Seção de Hotsites / Torneios (SEM CORTES NAS IMAGENS) -->
   <main class="tournaments-section">
     <div class="container">
       <div class="row g-4">
@@ -331,9 +336,11 @@
         <!-- Card 1: Zani Jóias Open -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="tournament-card">
-            <a href="https://duplafalta.com.br/zani-joias-open/">
-              <img src="assets/images/capa-site.png" alt="Dupla Falta - Zani Jóias Open">
-            </a>
+            <div class="tournament-card-img-wrapper">
+              <a href="https://duplafalta.com.br/zani-joias-open/">
+                <img src="assets/images/capa-site.png" alt="Dupla Falta - Zani Jóias Open">
+              </a>
+            </div>
             <div class="card-body">
               <p class="card-text text-muted">Hotsite do Torneio de Tênis mais Charmoso do Espírito Santo.</p>
               <a href="https://duplafalta.com.br/zani-joias-open/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
@@ -344,9 +351,11 @@
         <!-- Card 2: Granex Open -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="tournament-card">
-            <a href="https://duplafalta.com.br/granexopen/">
-              <img src="assets/images/site-capa-4.png" alt="Dupla Falta - Granex Open">
-            </a>
+            <div class="tournament-card-img-wrapper">
+              <a href="https://duplafalta.com.br/granexopen/">
+                <img src="assets/images/site-capa-4.png" alt="Dupla Falta - Granex Open">
+              </a>
+            </div>
             <div class="card-body">
               <p class="card-text text-muted">Sessão exclusiva do Maior torneio de Tênis do ES.</p>
               <a href="https://duplafalta.com.br/granexopen/" class="btn btn-outline-primary w-100 mt-auto" target="_blank">Acesse Aqui</a>
@@ -357,9 +366,11 @@
         <!-- Card 3: Copa Dupla Falta -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="tournament-card">
-            <a href="https://duplafalta.com.br/copa-dupla-falta">
-              <img src="assets/images/logo.png" alt="Dupla Falta - Copa Cooabriel">
-            </a>
+            <div class="tournament-card-img-wrapper">
+              <a href="https://duplafalta.com.br/copa-dupla-falta">
+                <img src="assets/images/logo.png" alt="Dupla Falta - Copa Cooabriel">
+              </a>
+            </div>
             <div class="card-body">
               <p class="card-text text-muted">Maior torneio de Tênis por Equipes do Estado do Espírito Santo.</p>
               <a href="https://duplafalta.com.br/copa-dupla-falta" class="btn btn-outline-primary w-100 mt-auto">Acesse Aqui</a>
