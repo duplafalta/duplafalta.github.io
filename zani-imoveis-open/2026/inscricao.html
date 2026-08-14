@@ -347,16 +347,52 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .iframe-wrapper {
-      max-width: 440px;
-      margin: 15px auto;
-      overflow: hidden;
+    .countdown-wrapper {
+      max-width: 560px;
+      margin: 18px auto;
     }
 
-    .iframe-wrapper iframe {
-      width: 100%;
-      height: 80px;
-      border: 0;
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .countdown-item {
+      background: var(--bg-dark);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 12px 8px;
+    }
+
+    .countdown-number {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .countdown-label {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .countdown-finished {
+      display: none;
+      background: var(--bg-red);
+      color: #ffffff;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* Rodapé */
@@ -550,8 +586,26 @@
     <!-- Datas e Contagem Regressiva -->
     <div class="dates-card">
       <p><strong>Data Limite para Inscrições: 04/08/2026 - Terça-feira</strong></p>
-      <div class="iframe-wrapper">
-        <iframe name="contagem" src="https://duplafalta.com.br/zani-imoveis-open/2026/contagem/index.html" scrolling="no"></iframe>
+      <div class="countdown-wrapper">
+        <div id="countdown" class="countdown" aria-label="Contagem regressiva para o fim das inscrições">
+          <div class="countdown-item">
+            <span id="countdown-days" class="countdown-number">00</span>
+            <span class="countdown-label">Dias</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-hours" class="countdown-number">00</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-minutes" class="countdown-number">00</span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-seconds" class="countdown-number">00</span>
+            <span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+        <div id="countdown-finished" class="countdown-finished">INSCRIÇÕES ENCERRADAS</div>
       </div>
       <p><strong>Sorteio das Chaves: 07/08/2026 - Sexta-feira</strong></p>
     </div>
@@ -581,6 +635,45 @@
         alert("Chave PIX copiada: " + inputPix.value);
       });
     }
+
+    // Contagem regressiva interna.
+    // Altere apenas a data abaixo nos próximos eventos.
+    const dataLimiteInscricoes = new Date("2026-08-04T23:59:59-03:00").getTime();
+
+    function atualizarContagemRegressiva() {
+      const agora = Date.now();
+      const distancia = dataLimiteInscricoes - agora;
+
+      const countdown = document.getElementById("countdown");
+      const finished = document.getElementById("countdown-finished");
+
+      if (distancia <= 0) {
+        countdown.style.display = "none";
+        finished.style.display = "block";
+        return false;
+      }
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-days").textContent = String(dias).padStart(2, "0");
+      document.getElementById("countdown-hours").textContent = String(horas).padStart(2, "0");
+      document.getElementById("countdown-minutes").textContent = String(minutos).padStart(2, "0");
+      document.getElementById("countdown-seconds").textContent = String(segundos).padStart(2, "0");
+
+      countdown.style.display = "grid";
+      finished.style.display = "none";
+      return true;
+    }
+
+    atualizarContagemRegressiva();
+    const timerContagem = setInterval(() => {
+      if (!atualizarContagemRegressiva()) {
+        clearInterval(timerContagem);
+      }
+    }, 1000);
   </script>
 
 </body>
